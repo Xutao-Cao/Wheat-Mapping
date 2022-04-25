@@ -50,7 +50,7 @@ def get_data(sites: list, years: list, base_path: str, type: str, verbose: bool)
     for site in sites:
         for year in years:
             cnt = 0
-            for num in range(70):
+            for num in range(100):
                 X_filename = "{site}_{year}_{num}.npy".format(site = site, year = year, num = num)
                 Y_filename = "{site}_{year}_{num}.npy".format(site = site, year = year, num = num)
                 path = os.path.join(curr_path, X_filename)
