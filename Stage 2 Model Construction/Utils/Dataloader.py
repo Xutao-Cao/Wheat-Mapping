@@ -1,8 +1,9 @@
+import imp
 import os
-from pickle import FALSE
-import site
 import numpy as np
-
+from torch.utils.data import Dataset, DataLoader
+from torchvision import transforms
+import torch
 BASE_PATH = "./Data"
 
 def get_data(sites: list, years: list, base_path: str, type: str, verbose: bool):
@@ -67,7 +68,7 @@ def get_data(sites: list, years: list, base_path: str, type: str, verbose: bool)
         print("Completed! Loaded {total} images in total.".format(total = total_imgs))
     return X, Y
 
-def ML_dataloader(sites: list, years: list, base_path = BASE_PATH, type = "Both", verbose = FALSE):
+def ML_dataloader(sites: list, years: list, base_path = BASE_PATH, type = "Both", verbose = False):
     """
     Generate input for a machine learning classifer
 
@@ -102,7 +103,7 @@ def ML_dataloader(sites: list, years: list, base_path = BASE_PATH, type = "Both"
 
     return X_stacked, Y_stacked
 
-def Seq_model_dataloader(sites: list, years: list, base_path = BASE_PATH, type = "Both", verbose = FALSE):
+def Seq_model_dataloader(sites: list, years: list, base_path = BASE_PATH, type = "Both", verbose = False):
     """
     Generate input for sequence models
 
@@ -137,7 +138,7 @@ def Seq_model_dataloader(sites: list, years: list, base_path = BASE_PATH, type =
 
     return X_stacked, Y_stacked
 
-def Graph_model_dataloader(sites: list, years: list, base_path = BASE_PATH, type = "Both", verbose = FALSE):
+def Graph_model_dataloader(sites: list, years: list, base_path = BASE_PATH, type = "Both", verbose = False):
     """
     Generate input for graph models
 
@@ -152,7 +153,7 @@ def Graph_model_dataloader(sites: list, years: list, base_path = BASE_PATH, type
     base_path: str
         the base path of the images
 
-    feature_type: str
+    type: str
         "S1" , "L8" or "Both"
     
     verbose: bool
@@ -168,7 +169,46 @@ def Graph_model_dataloader(sites: list, years: list, base_path = BASE_PATH, type
     Y_stacked = np.stack(Y_list, axis=0)
     X_stacked = X_stacked.reshape((X_stacked.shape[0], X_stacked.shape[1], -1))
     Y_stacked = Y_stacked.reshape((-1,1))
+
+class Satellite_image_dataset(Dataset):
+    """
+    Construct a satellite image dataset with normalization
+
+    Parameters
+    ----------
+    sites: list
+        contains the list of sites of images
     
+    years: list
+        contains the list of years of images
+
+    base_path: str
+        the base path of the images
+
+    type: str
+        "S1" , "L8" or "Both"
+
+    """
+    def __init__(self, sites: list, years: list, type: str, base_path = BASE_PATH,) :
+        
+        self.sites = sites
+        self.years = years
+        self.bath_path = base_path
+        self.type = type
+        self.image, self.label = get_data(sites, years, base_path, type)
+        self.transform = transforms.Compose([
+            transforms.ToTensor(),
+            transforms.Normalize()
+        ])
+
+    def __len__(self):
+        return len(self.image)
+    
+    def __getitem__(self, index) :
+        images = self.transform(self.image[index])
+        labels = torch.IntTensor(self.label[index])
+        return images, labels
+
 
 
 
