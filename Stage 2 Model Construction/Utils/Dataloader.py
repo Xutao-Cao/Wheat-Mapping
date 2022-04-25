@@ -1,12 +1,13 @@
 import imp
 import os
 import numpy as np
+from regex import R
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
 import torch
 BASE_PATH = "./Data"
 
-def get_data(sites: list, years: list, base_path: str, type: str, verbose: bool):
+def get_data(sites: list, years: list, base_path: str , type: str, verbose: bool):
     """
     Get data imgs from base path
 
@@ -189,24 +190,26 @@ class Satellite_image_dataset(Dataset):
         "S1" , "L8" or "Both"
 
     """
-    def __init__(self, sites: list, years: list, type: str, base_path = BASE_PATH,) :
+    def __init__(self, sites: list, years: list, type: str, channel_mean, channel_std,base_path = BASE_PATH,) :
         
         self.sites = sites
         self.years = years
         self.bath_path = base_path
         self.type = type
-        self.image, self.label = get_data(sites, years, base_path, type)
+        self.image, self.label = get_data(sites, years, base_path, type, False)
         self.transform = transforms.Compose([
             transforms.ToTensor(),
-            transforms.Normalize()
+            transforms.Normalize(channel_mean, channel_std)
         ])
 
     def __len__(self):
         return len(self.image)
     
     def __getitem__(self, index) :
-        images = self.transform(self.image[index])
-        labels = torch.IntTensor(self.label[index])
+        # reshaped_image = np.moveaxis(self.image[index], [2, 3], [0, 1])
+        reshaped_image = self.image[index].reshape((self.image[index].shape[0], self.image[index].shape[1], -1)).astype('float32')
+        images = self.transform(reshaped_image)
+        labels = torch.FloatTensor(self.label[index])
         return images, labels
 
 

@@ -49,7 +49,7 @@ class UpSampleBlock(nn.Module):
 class U_net(nn.Module):
 
     def __init__(self, n_channels, n_classes, n_feature_maps = 128):
-        super(U_net).__init__()
+        super().__init__()
         self.channels = n_channels
         self.classes = n_classes
         self.doubleconv_0 = DoubleConv(n_channels, n_feature_maps)
@@ -69,10 +69,10 @@ class U_net(nn.Module):
         x2 = self.down_1(x1)
         x3 = self.down_2(x2)
         x = self.down_3(x3)
-        x = self.up_0(x3, x)
-        x = self.up_1(x2, x)
-        x = self.up_2(x1, x)
-        x = self.up_3(x0, x)
+        x = self.up_0(x, x3)
+        x = self.up_1(x, x2)
+        x = self.up_2(x, x1)
+        x = self.up_3(x, x0)
         x = self.out(x)
-        return x
+        return x.squeeze()
 
