@@ -171,64 +171,70 @@ def Graph_model_dataloader(sites: list, years: list, base_path = BASE_PATH, type
     X_stacked = X_stacked.reshape((X_stacked.shape[0], X_stacked.shape[1], -1))
     Y_stacked = Y_stacked.reshape((-1,1))
 
-# class Satellite_image_dataset(Dataset):
-#     """
-#     Construct a satellite image dataset with normalization
+class Satellite_image_dataset(Dataset):
+    """
+    Construct a satellite image dataset with normalization
 
-#     Parameters
-#     ----------
-#     sites: list
-#         contains the list of sites of images
+    Parameters
+    ----------
+    sites: list
+        contains the list of sites of images
     
-#     years: list
-#         contains the list of years of images
+    years: list
+        contains the list of years of images
 
-#     base_path: str
-#         the base path of the images
+    base_path: str
+        the base path of the images
 
-#     type: str
-#         "S1" , "L8" or "Both"
+    type: str
+        "S1" , "L8" or "Both"
     
-#     model: "Unet" "ConvLSTM" "dcm"
+    model: "Unet" "ConvLSTM" "dcm"
 
-#     """
-#     def __init__(self, sites: list, years: list, type: str, base_path = BASE_PATH, model = "Unet") :
-#         self.model = model
-#         self.sites = sites
-#         self.years = years
-#         self.bath_path = base_path
-#         self.type = type
-#         self.image, self.label = get_data(sites, years, base_path, type, False)
-#         self.channel_mean = None
-#         self.channel_std = None
-#         self.transform = None
-#         if self.model == "Unet":
-#             x_stacked = np.moveaxis(np.stack(self.image, -1), [2, 3], [0, 1])
-#             x_stacked = x_stacked.reshape((x_stacked.shape[0], x_stacked.shape[1], -1))
-#             x_reshaped = x_stacked.reshape(-1, x_stacked.shape[-1])
-#             channel_mean = np.mean(x_reshaped, axis=1)
-#             channel_std = np.std(x_reshaped, axis=1)
-#             self.transform = transforms.Compose([
-#                 transforms.ToTensor(),
-#                 transforms.Normalize(channel_mean, channel_std)
-#             ])
-#         elif self.model == "ConvLSTM":
+    """
+    def __init__(self, sites: list, years: list, type: str, base_path = BASE_PATH, model = "Unet") :
+        self.model = model
+        self.sites = sites
+        self.years = years
+        self.bath_path = base_path
+        self.type = type
+        #image (H, W, T, C)
+        self.image, self.label = get_data(sites, years, base_path, type, False)
+        self.channel_mean = None
+        self.channel_std = None
+        self.transform = None
+        if self.model == "Unet":
+            x_stacked = np.moveaxis(np.stack(self.image, -1), [2, 3], [0, 1])
+            x_stacked = x_stacked.reshape((x_stacked.shape[0], x_stacked.shape[1], -1))
+            x_reshaped = x_stacked.reshape(-1, x_stacked.shape[-1])
+            self.channel_mean = np.mean(x_reshaped, axis=1)
+            self.channel_std = np.std(x_reshaped, axis=1)
+            self.transform = transforms.Compose([
+                transforms.ToTensor(),
+                transforms.Normalize(self.channel_mean, self.channel_std)
+            ])
+        elif self.model == "ConvLSTM":
+            x_stacked = np.stack(self.image, 0)
+            self.channel_mean = np.mean(x_stacked, [0,1,2,3])
+            self.channel_std = np.std(x_stacked, [0,1,2,3])
             
 
-#     def __len__(self):
-#         return len(self.image)
+    def __len__(self):
+        return len(self.image)
     
-#     def __getitem__(self, index) :
-#         # reshaped_image = np.moveaxis(self.image[index], [2, 3], [0, 1])
-#         images = None
-#         if self.model == "Unet":
-#             reshaped_image = self.image[index].reshape((self.image[index].shape[0], self.image[index].shape[1], -1)).astype('float32')
-#             images = self.transform(reshaped_image)
-#         elif self.model == "ConvLSTM":
+    def __getitem__(self, index) :
+        # reshaped_image = np.moveaxis(self.image[index], [2, 3], [0, 1])
+        images = None
+        if self.model == "Unet":
+            reshaped_image = self.image[index].reshape((self.image[index].shape[0], self.image[index].shape[1], -1)).astype('float32')
+            images = self.transform(reshaped_image)
+        elif self.model == "ConvLSTM":
+            normalized_image = (self.image[index] - np.broadcast_to(self.channel_mean, self.image[index].shape))/(np.broadcast_to(self.channel_std, self.image[index].shape) + 1e-7)
+            images = torch.FloatTensor(np.moveaxis(normalized_image, [0, 1], [2, 3])) 
             
-#         images = self.transform(reshaped_image)
-#         labels = torch.FloatTensor(self.label[index])
-#         return images, labels
+        images = self.transform(reshaped_image)
+        labels = torch.FloatTensor(self.label[index])
+        return images, labels
 
 
 
