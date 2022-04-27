@@ -1,3 +1,4 @@
+"""This code is forked from https://github.com/Lab-IDEAS/DeepCropMapping.git with minor changes on the output layer."""
 import numpy as np
 import torch
 import torch.nn as nn

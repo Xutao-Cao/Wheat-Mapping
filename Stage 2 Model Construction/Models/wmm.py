@@ -54,7 +54,7 @@ class ConvLSTMCell(nn.Module):
 
     def init_hidden(self, batch_size, image_size):
         height, width = image_size
-        return (nn.init.xavier_normal_(torch.empty(batch_size, self.hidden_dim, height, width, device=self.conv.weight.device)),
+        return (xavier_normal_(torch.empty(batch_size, self.hidden_dim, height, width, device=self.conv.weight.device)),
                 torch.zeros(batch_size, self.hidden_dim, height, width, device=self.conv.weight.device))
 
 
@@ -84,7 +84,7 @@ class WMM(nn.Module):
         >> h = last_states[0][0]  # 0 for layer index, 0 for h index
     """
 
-    def __init__(self, input_dim, hidden_dim=16, kernel_size=(3,1), num_layers=2, num_classes=1,
+    def __init__(self, input_dim, hidden_dim=16, kernel_size=(3,3), num_layers=2, num_classes=1,
                  batch_first=True, bias=True, return_all_layers=False):
         super(WMM, self).__init__()
 
@@ -120,7 +120,7 @@ class WMM(nn.Module):
                                           kernel_size=self.kernel_size[i],
                                           bias=self.bias))
 
-        self.cell_list = nn.ModuleList(cell_list)
+        self.cell_list = nn.ModuleList(*cell_list)
 
     def forward(self, input_tensor, hidden_state=None):
         """
@@ -178,7 +178,8 @@ class WMM(nn.Module):
         # attn_weights (after permutation): (b, h, w, hidden_dim, t)
         fc_in = torch.matmul(attn_weights.permute(0, 1, 2, 4, 3), layer_output)
         fc_out = self.fc(fc_in) 
-        return fc_out.squeeze(), attn_weights.squeeze()
+        # return fc_out.squeeze(), attn_weights.squeeze()
+        return fc_out.squeeze()
 
     def _init_hidden(self, batch_size, image_size):
         init_states = []
@@ -200,7 +201,7 @@ class WMM(nn.Module):
 
 
 # x = torch.rand((32, 10, 3, 128, 128))
-# convlstm = WMM(3, 16, (3,1), 1, 1, True, True, False)
+# convlstm = WMM(3, 16, (3,3), 1, 1, True, True, False)
 # RST, _ = convlstm(x)
 
 # print(RST.size())
