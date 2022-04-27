@@ -198,6 +198,7 @@ class Satellite_image_dataset(Dataset):
         self.years = years
         self.bath_path = base_path
         self.type = type
+        #image (H, W, T, C)
         self.image, self.label = get_data(sites, years, base_path, type, False)
         self.channel_mean = None
         self.channel_std = None
@@ -206,13 +207,16 @@ class Satellite_image_dataset(Dataset):
             x_stacked = np.moveaxis(np.stack(self.image, -1), [2, 3], [0, 1])
             x_stacked = x_stacked.reshape((x_stacked.shape[0], x_stacked.shape[1], -1))
             x_reshaped = x_stacked.reshape(-1, x_stacked.shape[-1])
-            channel_mean = np.mean(x_reshaped, axis=1)
-            channel_std = np.std(x_reshaped, axis=1)
+            self.channel_mean = np.mean(x_reshaped, axis=1)
+            self.channel_std = np.std(x_reshaped, axis=1)
             self.transform = transforms.Compose([
                 transforms.ToTensor(),
-                transforms.Normalize(channel_mean, channel_std)
+                transforms.Normalize(self.channel_mean, self.channel_std)
             ])
         elif self.model == "ConvLSTM":
+            x_stacked = np.stack(self.image, 0)
+            self.channel_mean = np.mean(x_stacked, [0,1,2,3])
+            self.channel_std = np.std(x_stacked, [0,1,2,3])
             
 
     def __len__(self):
@@ -225,6 +229,8 @@ class Satellite_image_dataset(Dataset):
             reshaped_image = self.image[index].reshape((self.image[index].shape[0], self.image[index].shape[1], -1)).astype('float32')
             images = self.transform(reshaped_image)
         elif self.model == "ConvLSTM":
+            normalized_image = (self.image[index] - np.broadcast_to(self.channel_mean, self.image[index].shape))/(np.broadcast_to(self.channel_std, self.image[index].shape) + 1e-7)
+            images = torch.FloatTensor(np.moveaxis(normalized_image, [0, 1], [2, 3])) 
             
         images = self.transform(reshaped_image)
         labels = torch.FloatTensor(self.label[index])
