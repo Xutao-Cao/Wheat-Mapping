@@ -120,7 +120,7 @@ class WMM(nn.Module):
                                           kernel_size=self.kernel_size[i],
                                           bias=self.bias))
 
-        self.cell_list = nn.ModuleList(*cell_list)
+        self.cell_list = nn.ModuleList(cell_list)
 
     def forward(self, input_tensor, hidden_state=None):
         """

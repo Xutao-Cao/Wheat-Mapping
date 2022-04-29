@@ -198,12 +198,13 @@ class Satellite_image_dataset(Dataset):
         self.years = years
         self.bath_path = base_path
         self.type = type
-        #image (H, W, T, C)
+        #image (H, W, C, T)
         self.image, self.label = get_data(sites, years, base_path, type, False)
         self.channel_mean = None
         self.channel_std = None
         self.transform = None
         if self.model == "Unet":
+            #FIXME: dim check!!!
             x_stacked = np.moveaxis(np.stack(self.image, -1), [2, 3], [0, 1])
             x_stacked = x_stacked.reshape((x_stacked.shape[0], x_stacked.shape[1], -1))
             x_reshaped = x_stacked.reshape(-1, x_stacked.shape[-1])
@@ -214,9 +215,9 @@ class Satellite_image_dataset(Dataset):
                 transforms.Normalize(self.channel_mean, self.channel_std)
             ])
         elif self.model == "ConvLSTM":
-            x_stacked = np.stack(self.image, 0)
-            self.channel_mean = np.mean(x_stacked, [0,1,2,3])
-            self.channel_std = np.std(x_stacked, [0,1,2,3])
+            x_stacked = np.moveaxis(np.stack(self.image, 0), 4, 3).reshape((-1, self.image[0].shape[2]))
+            self.channel_mean = np.mean(x_stacked, 0)
+            self.channel_std = np.std(x_stacked, 0)
             
 
     def __len__(self):
@@ -229,10 +230,9 @@ class Satellite_image_dataset(Dataset):
             reshaped_image = self.image[index].reshape((self.image[index].shape[0], self.image[index].shape[1], -1)).astype('float32')
             images = self.transform(reshaped_image)
         elif self.model == "ConvLSTM":
-            normalized_image = (self.image[index] - np.broadcast_to(self.channel_mean, self.image[index].shape))/(np.broadcast_to(self.channel_std, self.image[index].shape) + 1e-7)
-            images = torch.FloatTensor(np.moveaxis(normalized_image, [0, 1], [2, 3])) 
-            
-        images = self.transform(reshaped_image)
+            normalized_image = (self.image[index] - np.broadcast_to(self.channel_mean.reshape((-1, 1)), self.image[index].shape))/(np.broadcast_to(self.channel_std.reshape((-1, 1)), self.image[index].shape) + 1e-7)
+            # from [H, W, C, T] to [T, C, H, W]
+            images = torch.FloatTensor(np.moveaxis(normalized_image, [2, 3], [1, 0])) 
         labels = torch.FloatTensor(self.label[index])
         return images, labels
 
