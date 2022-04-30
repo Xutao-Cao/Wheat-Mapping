@@ -1,7 +1,6 @@
 import imp
 import os
 import numpy as np
-from regex import R
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
 import torch
