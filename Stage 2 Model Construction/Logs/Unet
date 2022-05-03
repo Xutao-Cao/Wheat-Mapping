@@ -1,1 +1,6 @@
 Both 5 both accuracy: 0.9714, f1: 0.9443, coppa: 0.9250
+both 1 both accuracy: 0.8574, f1: 0.8230, coppa: 0.7039
+both 3 both accuracy: 0.8250, f1: 0.7796, coppa: 0.6347
+both 9 both accuracy: 0.8275, f1: 0.7858, coppa: 0.6415
+both 7 both accuracy: 0.8708, f1: 0.8599, coppa: 0.7403
+S1 1 S1 accuracy: 0.8454, f1: 0.8153, coppa: 0.6838
