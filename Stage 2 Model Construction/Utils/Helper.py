@@ -47,10 +47,10 @@ class train_mission():
         write_list.append(f1_test)
         write_list.append(kappa_train)
         write_list.append(kappa_test)
-        np.save("./Trained models/{m}_{t}_{s1}_{s2}_y_train.npy".format(m = self.model_name, t = self.type, s1 = self.train_site[0], s2 = self.test_site[0]), y_train)
-        np.save("./Trained models/{m}_{t}_{s1}_{s2}_y_test.npy".format(m = self.model_name, t = self.type, s1 = self.train_site[0], s2 = self.test_site[0]), y_test)
-        np.save("./Trained models/{m}_{t}_{s1}_{s2}_y_train_predict.npy".format(m = self.model_name, t = self.type, s1 = self.train_site[0], s2 = self.test_site[0]), y_train_predict)
-        np.save("./Trained models/{m}_{t}_{s1}_{s2}_y_test_predict.npy".format(m = self.model_name, t = self.type, s1 = self.train_site[0], s2 = self.test_site[0]), y_test_predict)
+        # np.save("./Trained models/{m}_{t}_{s1}_{s2}_y_train.npy".format(m = self.model_name, t = self.type, s1 = self.train_site[0], s2 = self.test_site[0]), y_train)
+        # np.save("./Trained models/{m}_{t}_{s1}_{s2}_y_test.npy".format(m = self.model_name, t = self.type, s1 = self.train_site[0], s2 = self.test_site[0]), y_test)
+        # np.save("./Trained models/{m}_{t}_{s1}_{s2}_y_train_predict.npy".format(m = self.model_name, t = self.type, s1 = self.train_site[0], s2 = self.test_site[0]), y_train_predict)
+        # np.save("./Trained models/{m}_{t}_{s1}_{s2}_y_test_predict.npy".format(m = self.model_name, t = self.type, s1 = self.train_site[0], s2 = self.test_site[0]), y_test_predict)
         time_elapsed = self.end_time - self.begin_time
         time_elapsed = time_elapsed / 60
         write_list.append(time_elapsed) 

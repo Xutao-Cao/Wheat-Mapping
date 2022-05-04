@@ -87,7 +87,7 @@ class ConvLSTM(nn.Module):
     """
 
     def __init__(self, input_dim, hidden_dim, kernel_size, num_layers,
-                 batch_first=False, bias=True, return_all_layers=False):
+                 batch_first=True, bias=True, return_all_layers=False):
         super(ConvLSTM, self).__init__()
 
         self._check_kernel_size_consistency(kernel_size)
@@ -188,26 +188,49 @@ class ConvLSTM(nn.Module):
             param = [param] * num_layers
         return param
 
+class BiConvLSTM(nn.Module):
+    """output dim will be hidden_dim*2"""
+    def __init__(self, input_dim, hidden_dim, kernel_size, num_layers) -> None:
+        super().__init__()
+        self.forward_convlstm = ConvLSTM(input_dim, hidden_dim, kernel_size, num_layers)
+        self.backward_convlstm = ConvLSTM(input_dim, hidden_dim, kernel_size, num_layers)
+    
+    def forward(self, x):
+        out0 = self.forward_convlstm(x)[0][0]
+        reversed_index = list(reversed(range(x.shape[1])))
+        out1 = self.backward_convlstm(x[:,reversed_index,...])[0][0]
+        out = torch.cat([out0, out1], 2)
+        return out
+
 
 class ResDoubleConv(nn.Module):
 
     def __init__(self, in_channels, out_channels, timesteps) -> None:
         super().__init__()
-        self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size = 3, groups= timesteps , padding = 1, bias = False)
-        self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size = 3, groups= timesteps , padding = 1, bias = False)
+        if timesteps == 0:
+            self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size = 3,  padding = 1, bias = False)
+            self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size = 3,  padding = 1, bias = False)
+        else:
+            self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size = 3, groups= timesteps , padding = 1, bias = False)
+            self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size = 3, groups= timesteps , padding = 1, bias = False)
         if in_channels != out_channels:
-            self.res_connection = nn.Sequential(nn.Conv2d(in_channels,out_channels, kernel_size = 1, groups= timesteps , padding = 0, bias = False), 
+            if timesteps == 0:
+                self.res_connection = nn.Sequential(nn.Conv2d(in_channels,out_channels, kernel_size = 1, padding = 0, bias = False), 
+                                                nn.BatchNorm2d(out_channels))
+            else:
+                self.res_connection = nn.Sequential(nn.Conv2d(in_channels,out_channels, kernel_size = 1, groups= timesteps , padding = 0, bias = False), 
                                                 nn.BatchNorm2d(out_channels))
             
         else:
             self.res_connection = nn.Sequential()
-        self.bn = nn.BatchNorm2d(out_channels)
+        self.bn1 = nn.BatchNorm2d(out_channels)
+        self.bn2 = nn.BatchNorm2d(out_channels)
         self.relu = nn.ReLU(inplace=True)
 
     def forward(self, x):
         identity = self.res_connection(x)
-        x = self.relu(self.bn(self.conv1(x)))
-        x = self.bn(self.conv2(x))
+        x = self.relu(self.bn1(self.conv1(x)))
+        x = self.bn2(self.conv2(x))
         out = self.relu(x + identity)
         out = self.relu(x)
         return out
@@ -230,7 +253,7 @@ class UpSampleBlock(nn.Module):
     def __init__(self, in_channels, out_channels, timesteps):
         super().__init__()
         self.up = nn.ConvTranspose2d(in_channels, in_channels//2, kernel_size=2, stride=2, groups=timesteps)
-        self.double_conv = ResDoubleConv(in_channels, out_channels, timesteps)
+        self.double_conv = ResDoubleConv(3*in_channels//2, out_channels, timesteps)
 
     def forward(self, x, down_sample_x):
         x = self.up(x)
@@ -238,10 +261,32 @@ class UpSampleBlock(nn.Module):
         x = self.double_conv(x)
         return x
 
+class _DenseLayer(nn.Module):
+    def __init__(self,in_channels, out_channels, dropout) -> None:
+        super().__init__()
+        self.forward_op = nn.Sequential(
+            nn.Conv2d(in_channels, out_channels, 1),
+            nn.BatchNorm2d(out_channels),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(out_channels, out_channels, 3, padding=1),
+            nn.BatchNorm2d(out_channels),
+            nn.ReLU(inplace=True),
+            nn.Dropout(dropout),
+        )
+    
+    def forward(self, x,):
+        return self.forward_op(x)
+        
+        
+            
+class DenseBlock(nn.Module):
+    def __init__(self, in_channels, out_channels, block_len, dropout = 0.5) -> None:
+        super().__init__()
+
 
 class WMM(nn.Module):
 
-    def __init__(self, n_channels, n_classes, timesteps, n_feature_maps=120, n_convlstm = 1) -> None:
+    def __init__(self, n_channels, n_classes, timesteps,dropout = 0.2, n_feature_maps=120, n_convlstm = 1) -> None:
         super().__init__()
         self.channels = n_channels
         self.classes = n_classes
@@ -249,46 +294,60 @@ class WMM(nn.Module):
         self.n_convlstm = n_convlstm
         self.doubleconv_0 = ResDoubleConv(n_channels, n_feature_maps, timesteps)
         self.down_0 = DownSampleBlock(n_feature_maps, 2 * n_feature_maps, timesteps)
-        self.double_res_0 = ResDoubleConv(2 * n_feature_maps, 2 * n_feature_maps, timesteps)
         self.down_1 = DownSampleBlock(2 * n_feature_maps, 4 * n_feature_maps, timesteps)
-        self.double_res_1 = ResDoubleConv(4 * n_feature_maps, 4 * n_feature_maps, timesteps)
         self.down_2 = DownSampleBlock(4 * n_feature_maps, 8 * n_feature_maps, timesteps)
-        self.double_res_2 = ResDoubleConv(8 * n_feature_maps, 8 * n_feature_maps, timesteps)
         self.down_3 = DownSampleBlock(8 * n_feature_maps, 16 * n_feature_maps, timesteps)
-        self.double_res_3 = ResDoubleConv(16 * n_feature_maps, 16 * n_feature_maps, timesteps)
+        self.dense0 = _DenseLayer(16 * n_feature_maps, 16 * n_feature_maps, dropout)
+        self.dense1 = _DenseLayer(32 * n_feature_maps, 16 * n_feature_maps, dropout)
+        self.dense2 = _DenseLayer(48 * n_feature_maps, 16 * n_feature_maps, dropout)
+        # self.dense3 = _DenseLayer(64* n_feature_maps, 16 * n_feature_maps, dropout)
         self.up_0 = UpSampleBlock(16 * n_feature_maps, 8 * n_feature_maps, timesteps)
-        self.double_res_4 = ResDoubleConv(8 * n_feature_maps, 8 * n_feature_maps, timesteps)
         self.up_1 = UpSampleBlock(8 * n_feature_maps, 4 * n_feature_maps, timesteps)
-        self.double_res_5 = ResDoubleConv(4 * n_feature_maps, 4 * n_feature_maps, timesteps)
         self.up_2 = UpSampleBlock(4 * n_feature_maps, 2 * n_feature_maps, timesteps)
-        self.double_res_6 = ResDoubleConv(2 * n_feature_maps, 2 * n_feature_maps, timesteps)
         self.up_3 = UpSampleBlock(2 * n_feature_maps, n_feature_maps, timesteps)
         self.out = nn.Conv2d(n_feature_maps, n_classes, kernel_size=1,)
         self.convlstm0 = ConvLSTM(n_feature_maps // timesteps, n_feature_maps // timesteps, (3,3), n_convlstm, batch_first=True, bias = False)
         self.convlstm1 = ConvLSTM(2 * n_feature_maps // timesteps, 2 * n_feature_maps // timesteps, (3,3), n_convlstm, batch_first=True, bias = False)
         self.convlstm2 = ConvLSTM(4 * n_feature_maps // timesteps, 4 * n_feature_maps // timesteps, (3,3), n_convlstm, batch_first=True, bias = False)
         self.convlstm3 = ConvLSTM(8 * n_feature_maps // timesteps, 8 * n_feature_maps // timesteps, (3,3), n_convlstm, batch_first=True, bias = False)
+        self.biconvlstm0 = BiConvLSTM(n_feature_maps // timesteps, n_feature_maps // timesteps, (3,3), n_convlstm)
+        self.biconvlstm1 = BiConvLSTM(2 * n_feature_maps // timesteps, 2* n_feature_maps // timesteps, (3,3), n_convlstm)
+        self.biconvlstm2 = BiConvLSTM(4 * n_feature_maps // timesteps, 4 * n_feature_maps // timesteps, (3,3), n_convlstm)
+        self.biconvlstm3 = BiConvLSTM(8 * n_feature_maps // timesteps, 8 * n_feature_maps // timesteps, (3,3), n_convlstm)
     
     def forward(self, x):
         x = self._timeseq2img(x)
         x0 = self.doubleconv_0(x)
-        x0_connect = self.convlstm0(self._img2timeseq(x0))[0][0]
+        x0_connect = self.biconvlstm0(self._img2timeseq(x0))
         x1 = self.down_0(x0)
-        x1 = self.double_res_0(x1)
-        x1_connect = self.convlstm1(self._img2timeseq(x1))[0][0]
+        x1_connect = self.biconvlstm1(self._img2timeseq(x1))
         x2 = self.down_1(x1)
-        x2 = self.double_res_1(x2)
-        x2_connect = self.convlstm2(self._img2timeseq(x2))[0][0]
+        x2_connect = self.biconvlstm2(self._img2timeseq(x2))
         x3 = self.down_2(x2)
-        x3 = self.double_res_2(x3)
-        x3_connect= self.convlstm3(self._img2timeseq(x3))[0][0]
+        x3_connect= self.biconvlstm3(self._img2timeseq(x3))
         x = self.down_3(x3)
-        x3 = self.double_res_3(x)
+        dense0 = self.dense0(x)
+        dense1 = self.dense1(torch.cat([x, dense0], 1))
+        x = self.dense2(torch.cat([x, dense0, dense1], 1))
+        # x = self.dense3(torch.cat([x, dense0, dense1, dense2], 1))   
         x = self.up_0(x, self._timeseq2img(x3_connect))
-        x = self.double_res_4(x)
         x = self.up_1(x, self._timeseq2img(x2_connect))
-        x = self.double_res_5(x)
         x = self.up_2(x, self._timeseq2img(x1_connect))
-        x = self.double_res_6(x)
         x = self.up_3(x, self._timeseq2img(x0_connect))
-        x = self.
+        x = self.out(x)
+        return x.squeeze()
+
+    def _timeseq2img(self, x:torch.tensor):
+        """
+        input: (n, t, c, h, w)
+        output: (n, t*c, h, w)
+        """
+        return x.view((x.size(0), -1, x.size(3), x.size(4)))
+
+    def _img2timeseq(self, x:torch.tensor):
+        """
+        input: (n, t*c, h, w)
+        output: (n, t, c, h, w)
+        """
+        return x.view(x.size(0), self.timesteps, -1, x.size(2), x.size(3))
+
