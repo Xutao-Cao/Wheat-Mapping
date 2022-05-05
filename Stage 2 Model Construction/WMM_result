@@ -1,0 +1,2119 @@
+2022-05-04 08:13:18 Index:0, Model: WMM, train_site: 1, test_site: 1, type: L8
+Starting epoch number 1
+Loss for Training on Epoch 1 is 0.45457950234413147
+Evaluating classifier
+Test result:
+ test_loss: 0.6312, accuracy: 0.8355, f1: 0.8140, coppa: 0.6674
+Test result:
+ test_loss: 0.6114, accuracy: 0.7653, f1: 0.6271, coppa: 0.4684
+Starting epoch number 2
+Loss for Training on Epoch 2 is 0.3683124780654907
+Evaluating classifier
+Test result:
+ test_loss: 0.4129, accuracy: 0.8499, f1: 0.8227, coppa: 0.6926
+Test result:
+ test_loss: 0.4787, accuracy: 0.7668, f1: 0.6352, coppa: 0.4745
+Starting epoch number 3
+Loss for Training on Epoch 3 is 0.3459393084049225
+Evaluating classifier
+Test result:
+ test_loss: 0.3473, accuracy: 0.8613, f1: 0.8350, coppa: 0.7153
+Test result:
+ test_loss: 0.5013, accuracy: 0.7385, f1: 0.5398, coppa: 0.3884
+Starting epoch number 4
+Loss for Training on Epoch 4 is 0.33255815505981445
+Evaluating classifier
+Test result:
+ test_loss: 0.3535, accuracy: 0.8557, f1: 0.8418, coppa: 0.7109
+Test result:
+ test_loss: 0.4017, accuracy: 0.8216, f1: 0.7581, coppa: 0.6172
+Starting epoch number 5
+Loss for Training on Epoch 5 is 0.3330005407333374
+Evaluating classifier
+Test result:
+ test_loss: 0.3454, accuracy: 0.8547, f1: 0.8193, coppa: 0.6981
+Test result:
+ test_loss: 0.4528, accuracy: 0.7672, f1: 0.6178, coppa: 0.4671
+Starting epoch number 6
+Loss for Training on Epoch 6 is 0.32680076360702515
+Evaluating classifier
+Test result:
+ test_loss: 0.3258, accuracy: 0.8633, f1: 0.8444, coppa: 0.7230
+Test result:
+ test_loss: 0.3896, accuracy: 0.8165, f1: 0.7350, coppa: 0.5975
+Starting epoch number 7
+Loss for Training on Epoch 7 is 0.3272455334663391
+Evaluating classifier
+Test result:
+ test_loss: 0.3361, accuracy: 0.8663, f1: 0.8468, coppa: 0.7287
+Test result:
+ test_loss: 0.5582, accuracy: 0.7332, f1: 0.5338, coppa: 0.3775
+Starting epoch number 8
+Loss for Training on Epoch 8 is 0.3181614577770233
+Evaluating classifier
+Test result:
+ test_loss: 17.2140, accuracy: 0.6815, f1: 0.4128, coppa: 0.2727
+Test result:
+ test_loss: 59.4093, accuracy: 0.6148, f1: 0.0059, coppa: 0.0031
+Starting epoch number 9
+Loss for Training on Epoch 9 is 0.3163110911846161
+Evaluating classifier
+Test result:
+ test_loss: 0.3048, accuracy: 0.8724, f1: 0.8493, coppa: 0.7387
+Test result:
+ test_loss: 0.4459, accuracy: 0.7777, f1: 0.6433, coppa: 0.4950
+Starting epoch number 10
+Loss for Training on Epoch 10 is 0.3099004328250885
+Evaluating classifier
+Test result:
+ test_loss: 0.3048, accuracy: 0.8780, f1: 0.8579, coppa: 0.7512
+Test result:
+ test_loss: 0.4912, accuracy: 0.7190, f1: 0.4832, coppa: 0.3342
+Starting epoch number 11
+Loss for Training on Epoch 11 is 0.3091214895248413
+Evaluating classifier
+Test result:
+ test_loss: 0.2989, accuracy: 0.8763, f1: 0.8558, coppa: 0.7476
+Test result:
+ test_loss: 0.4672, accuracy: 0.7403, f1: 0.5416, coppa: 0.3921
+Starting epoch number 12
+Loss for Training on Epoch 12 is 0.312120646238327
+Evaluating classifier
+Test result:
+ test_loss: 0.3343, accuracy: 0.8607, f1: 0.8216, coppa: 0.7082
+Test result:
+ test_loss: 0.5956, accuracy: 0.6638, f1: 0.2627, coppa: 0.1637
+Starting epoch number 13
+Loss for Training on Epoch 13 is 0.30700740218162537
+Evaluating classifier
+Test result:
+ test_loss: 0.3101, accuracy: 0.8736, f1: 0.8463, coppa: 0.7390
+Test result:
+ test_loss: 0.8496, accuracy: 0.6496, f1: 0.1941, coppa: 0.1178
+Starting epoch number 14
+Loss for Training on Epoch 14 is 0.30533796548843384
+Evaluating classifier
+Test result:
+ test_loss: 0.2955, accuracy: 0.8814, f1: 0.8575, coppa: 0.7559
+Test result:
+ test_loss: 0.5290, accuracy: 0.6879, f1: 0.3704, coppa: 0.2407
+Starting epoch number 15
+Loss for Training on Epoch 15 is 0.30348333716392517
+Evaluating classifier
+Test result:
+ test_loss: 0.2901, accuracy: 0.8825, f1: 0.8581, coppa: 0.7578
+Test result:
+ test_loss: 0.5268, accuracy: 0.7054, f1: 0.4321, coppa: 0.2924
+Starting epoch number 16
+Loss for Training on Epoch 16 is 0.3043726682662964
+Evaluating classifier
+Test result:
+ test_loss: 0.3020, accuracy: 0.8773, f1: 0.8592, coppa: 0.7508
+Test result:
+ test_loss: 0.6948, accuracy: 0.6560, f1: 0.2393, coppa: 0.1424
+Starting epoch number 17
+Loss for Training on Epoch 17 is 0.2989961802959442
+Evaluating classifier
+Test result:
+ test_loss: 0.2801, accuracy: 0.8825, f1: 0.8605, coppa: 0.7591
+Test result:
+ test_loss: 0.5090, accuracy: 0.7369, f1: 0.5280, coppa: 0.3812
+Starting epoch number 18
+Loss for Training on Epoch 18 is 0.29505568742752075
+Evaluating classifier
+Test result:
+ test_loss: 0.2966, accuracy: 0.8802, f1: 0.8644, coppa: 0.7576
+Test result:
+ test_loss: 0.4151, accuracy: 0.7913, f1: 0.6957, coppa: 0.5406
+Starting epoch number 19
+Loss for Training on Epoch 19 is 0.29205796122550964
+Evaluating classifier
+Test result:
+ test_loss: 0.2935, accuracy: 0.8802, f1: 0.8639, coppa: 0.7575
+Test result:
+ test_loss: 0.4681, accuracy: 0.7597, f1: 0.6139, coppa: 0.4537
+Starting epoch number 20
+Loss for Training on Epoch 20 is 0.2944297790527344
+Evaluating classifier
+Test result:
+ test_loss: 0.2829, accuracy: 0.8836, f1: 0.8669, coppa: 0.7639
+Test result:
+ test_loss: 0.5381, accuracy: 0.7124, f1: 0.4732, coppa: 0.3193
+Starting epoch number 21
+Loss for Training on Epoch 21 is 0.2959706783294678
+Evaluating classifier
+Test result:
+ test_loss: 0.2824, accuracy: 0.8873, f1: 0.8659, coppa: 0.7687
+Test result:
+ test_loss: 0.5274, accuracy: 0.7108, f1: 0.4581, coppa: 0.3109
+Epoch 00021: reducing learning rate of group 0 to 2.5000e-04.
+Starting epoch number 22
+Loss for Training on Epoch 22 is 0.2852289080619812
+Evaluating classifier
+Test result:
+ test_loss: 0.2724, accuracy: 0.8885, f1: 0.8714, coppa: 0.7732
+Test result:
+ test_loss: 0.5236, accuracy: 0.7208, f1: 0.4962, coppa: 0.3421
+Starting epoch number 23
+Loss for Training on Epoch 23 is 0.2744632661342621
+Evaluating classifier
+Test result:
+ test_loss: 0.2618, accuracy: 0.8919, f1: 0.8733, coppa: 0.7792
+Test result:
+ test_loss: 0.4821, accuracy: 0.7169, f1: 0.4869, coppa: 0.3321
+Starting epoch number 24
+Loss for Training on Epoch 24 is 0.2788107097148895
+Evaluating classifier
+Test result:
+ test_loss: 0.2682, accuracy: 0.8920, f1: 0.8721, coppa: 0.7787
+Test result:
+ test_loss: 0.4950, accuracy: 0.7138, f1: 0.4634, coppa: 0.3179
+Starting epoch number 25
+Loss for Training on Epoch 25 is 0.26890358328819275
+Evaluating classifier
+Test result:
+ test_loss: 0.2681, accuracy: 0.8903, f1: 0.8740, coppa: 0.7772
+Test result:
+ test_loss: 0.5341, accuracy: 0.7196, f1: 0.4945, coppa: 0.3394
+Starting epoch number 26
+Loss for Training on Epoch 26 is 0.27687814831733704
+Evaluating classifier
+Test result:
+ test_loss: 0.2662, accuracy: 0.8944, f1: 0.8756, coppa: 0.7839
+Test result:
+ test_loss: 0.4950, accuracy: 0.7056, f1: 0.4459, coppa: 0.2977
+Starting epoch number 27
+Loss for Training on Epoch 27 is 0.2737998068332672
+Evaluating classifier
+Test result:
+ test_loss: 0.2625, accuracy: 0.8949, f1: 0.8745, coppa: 0.7842
+Test result:
+ test_loss: 0.5670, accuracy: 0.6734, f1: 0.3082, coppa: 0.1949
+Epoch 00027: reducing learning rate of group 0 to 6.2500e-05.
+Starting epoch number 28
+Loss for Training on Epoch 28 is 0.2687394618988037
+Evaluating classifier
+Test result:
+ test_loss: 0.2595, accuracy: 0.8952, f1: 0.8767, coppa: 0.7856
+Test result:
+ test_loss: 0.5719, accuracy: 0.6766, f1: 0.3269, coppa: 0.2065
+Starting epoch number 29
+Loss for Training on Epoch 29 is 0.2644071578979492
+Evaluating classifier
+Test result:
+ test_loss: 0.2563, accuracy: 0.8954, f1: 0.8779, coppa: 0.7864
+Test result:
+ test_loss: 0.5688, accuracy: 0.6861, f1: 0.3713, coppa: 0.2378
+Starting epoch number 30
+Loss for Training on Epoch 30 is 0.2677246928215027
+Evaluating classifier
+Test result:
+ test_loss: 0.2533, accuracy: 0.8967, f1: 0.8779, coppa: 0.7884
+Test result:
+ test_loss: 0.5738, accuracy: 0.6723, f1: 0.3112, coppa: 0.1938
+Starting epoch number 31
+Loss for Training on Epoch 31 is 0.26242631673812866
+Evaluating classifier
+Test result:
+ test_loss: 0.2572, accuracy: 0.8961, f1: 0.8789, coppa: 0.7881
+Test result:
+ test_loss: 0.5469, accuracy: 0.6805, f1: 0.3507, coppa: 0.2212
+Starting epoch number 32
+Loss for Training on Epoch 32 is 0.27317726612091064
+Evaluating classifier
+Test result:
+ test_loss: 0.2542, accuracy: 0.8963, f1: 0.8768, coppa: 0.7874
+Test result:
+ test_loss: 0.6471, accuracy: 0.6583, f1: 0.2442, coppa: 0.1482
+Starting epoch number 33
+Loss for Training on Epoch 33 is 0.2695445716381073
+Evaluating classifier
+Test result:
+ test_loss: 0.2531, accuracy: 0.8975, f1: 0.8788, coppa: 0.7900
+Test result:
+ test_loss: 0.5927, accuracy: 0.6675, f1: 0.2869, coppa: 0.1776
+Starting epoch number 34
+Loss for Training on Epoch 34 is 0.27256548404693604
+Evaluating classifier
+Test result:
+ test_loss: 0.2536, accuracy: 0.8975, f1: 0.8796, coppa: 0.7904
+Test result:
+ test_loss: 0.5866, accuracy: 0.6821, f1: 0.3539, coppa: 0.2251
+Starting epoch number 35
+Loss for Training on Epoch 35 is 0.2659931778907776
+Evaluating classifier
+Test result:
+ test_loss: 0.2552, accuracy: 0.8975, f1: 0.8782, coppa: 0.7897
+Test result:
+ test_loss: 0.6420, accuracy: 0.6555, f1: 0.2372, coppa: 0.1410
+Starting epoch number 36
+Loss for Training on Epoch 36 is 0.26664602756500244
+Evaluating classifier
+Test result:
+ test_loss: 0.2533, accuracy: 0.8985, f1: 0.8792, coppa: 0.7918
+Test result:
+ test_loss: 0.6655, accuracy: 0.6580, f1: 0.2422, coppa: 0.1470
+Starting epoch number 37
+Loss for Training on Epoch 37 is 0.26504310965538025
+Evaluating classifier
+Test result:
+ test_loss: 0.2514, accuracy: 0.8988, f1: 0.8806, coppa: 0.7927
+Test result:
+ test_loss: 0.6652, accuracy: 0.6600, f1: 0.2518, coppa: 0.1535
+Starting epoch number 38
+Loss for Training on Epoch 38 is 0.2621389329433441
+Evaluating classifier
+Test result:
+ test_loss: 0.2496, accuracy: 0.8975, f1: 0.8810, coppa: 0.7911
+Test result:
+ test_loss: 0.5628, accuracy: 0.6879, f1: 0.3866, coppa: 0.2463
+Starting epoch number 39
+Loss for Training on Epoch 39 is 0.26582643389701843
+Evaluating classifier
+Test result:
+ test_loss: 0.2524, accuracy: 0.8997, f1: 0.8808, coppa: 0.7942
+Test result:
+ test_loss: 0.6514, accuracy: 0.6650, f1: 0.2785, coppa: 0.1706
+Starting epoch number 40
+Loss for Training on Epoch 40 is 0.26588255167007446
+Evaluating classifier
+Test result:
+ test_loss: 0.2442, accuracy: 0.8999, f1: 0.8817, coppa: 0.7950
+Test result:
+ test_loss: 0.6927, accuracy: 0.6548, f1: 0.2337, coppa: 0.1386
+Starting epoch number 41
+Loss for Training on Epoch 41 is 0.259646475315094
+Evaluating classifier
+Test result:
+ test_loss: 0.2523, accuracy: 0.8987, f1: 0.8814, coppa: 0.7931
+Test result:
+ test_loss: 0.6687, accuracy: 0.6601, f1: 0.2658, coppa: 0.1578
+Starting epoch number 42
+Loss for Training on Epoch 42 is 0.26012441515922546
+Evaluating classifier
+Test result:
+ test_loss: 0.2466, accuracy: 0.9005, f1: 0.8822, coppa: 0.7961
+Test result:
+ test_loss: 0.6112, accuracy: 0.6735, f1: 0.3180, coppa: 0.1981
+Starting epoch number 43
+Loss for Training on Epoch 43 is 0.2592160403728485
+Evaluating classifier
+Test result:
+ test_loss: 0.2447, accuracy: 0.8996, f1: 0.8798, coppa: 0.7937
+Test result:
+ test_loss: 0.7356, accuracy: 0.6469, f1: 0.1886, coppa: 0.1112
+Starting epoch number 44
+Loss for Training on Epoch 44 is 0.25922855734825134
+Evaluating classifier
+Test result:
+ test_loss: 0.2470, accuracy: 0.9015, f1: 0.8834, coppa: 0.7981
+Test result:
+ test_loss: 0.6408, accuracy: 0.6608, f1: 0.2616, coppa: 0.1578
+Epoch 00044: reducing learning rate of group 0 to 1.5625e-05.
+Starting epoch number 45
+Loss for Training on Epoch 45 is 0.2572390139102936
+Evaluating classifier
+Test result:
+ test_loss: 0.2466, accuracy: 0.9017, f1: 0.8843, coppa: 0.7989
+Test result:
+ test_loss: 0.6539, accuracy: 0.6624, f1: 0.2745, coppa: 0.1647
+Starting epoch number 46
+Loss for Training on Epoch 46 is 0.25807976722717285
+Evaluating classifier
+Test result:
+ test_loss: 0.2439, accuracy: 0.9017, f1: 0.8843, coppa: 0.7990
+Test result:
+ test_loss: 0.6845, accuracy: 0.6596, f1: 0.2596, coppa: 0.1550
+Starting epoch number 47
+Loss for Training on Epoch 47 is 0.26208314299583435
+Evaluating classifier
+Test result:
+ test_loss: 0.2470, accuracy: 0.9016, f1: 0.8841, coppa: 0.7987
+Test result:
+ test_loss: 0.6891, accuracy: 0.6564, f1: 0.2449, coppa: 0.1448
+Starting epoch number 48
+Loss for Training on Epoch 48 is 0.25350141525268555
+Evaluating classifier
+Test result:
+ test_loss: 0.2415, accuracy: 0.9027, f1: 0.8845, coppa: 0.8004
+Test result:
+ test_loss: 0.7286, accuracy: 0.6437, f1: 0.1843, coppa: 0.1040
+Starting epoch number 49
+Loss for Training on Epoch 49 is 0.25542861223220825
+Evaluating classifier
+Test result:
+ test_loss: 0.2497, accuracy: 0.9019, f1: 0.8850, coppa: 0.7995
+Test result:
+ test_loss: 0.9366, accuracy: 0.6441, f1: 0.1884, coppa: 0.1059
+Starting epoch number 50
+Loss for Training on Epoch 50 is 0.2509860396385193
+Evaluating classifier
+Test result:
+ test_loss: 0.2468, accuracy: 0.9023, f1: 0.8857, coppa: 0.8005
+Test result:
+ test_loss: 0.7401, accuracy: 0.6542, f1: 0.2383, coppa: 0.1389
+Starting epoch number 51
+Loss for Training on Epoch 51 is 0.2546413242816925
+Evaluating classifier
+Test result:
+ test_loss: 0.2441, accuracy: 0.9031, f1: 0.8856, coppa: 0.8016
+Test result:
+ test_loss: 0.7616, accuracy: 0.6548, f1: 0.2340, coppa: 0.1387
+Starting epoch number 52
+Loss for Training on Epoch 52 is 0.25376054644584656
+Evaluating classifier
+Test result:
+ test_loss: 0.2438, accuracy: 0.9035, f1: 0.8851, coppa: 0.8020
+Test result:
+ test_loss: 0.7831, accuracy: 0.6508, f1: 0.2125, coppa: 0.1251
+Epoch 00052: reducing learning rate of group 0 to 3.9063e-06.
+Starting epoch number 53
+Loss for Training on Epoch 53 is 0.2565762996673584
+Evaluating classifier
+Test result:
+ test_loss: 0.2443, accuracy: 0.9039, f1: 0.8858, coppa: 0.8029
+Test result:
+ test_loss: 0.7767, accuracy: 0.6484, f1: 0.2028, coppa: 0.1179
+Starting epoch number 54
+Loss for Training on Epoch 54 is 0.24970711767673492
+Evaluating classifier
+Test result:
+ test_loss: 0.2434, accuracy: 0.9033, f1: 0.8864, coppa: 0.8023
+Test result:
+ test_loss: 0.7293, accuracy: 0.6520, f1: 0.2273, coppa: 0.1317
+Starting epoch number 55
+Loss for Training on Epoch 55 is 0.25219830870628357
+Evaluating classifier
+Test result:
+ test_loss: 0.2413, accuracy: 0.9030, f1: 0.8863, coppa: 0.8017
+Test result:
+ test_loss: 0.8092, accuracy: 0.6443, f1: 0.1903, coppa: 0.1068
+Starting epoch number 56
+Loss for Training on Epoch 56 is 0.24862655997276306
+Evaluating classifier
+Test result:
+ test_loss: 0.2419, accuracy: 0.9033, f1: 0.8865, coppa: 0.8024
+Test result:
+ test_loss: 0.7767, accuracy: 0.6550, f1: 0.2431, coppa: 0.1418
+Starting epoch number 57
+Loss for Training on Epoch 57 is 0.25792908668518066
+Evaluating classifier
+Test result:
+ test_loss: 0.2400, accuracy: 0.9034, f1: 0.8858, coppa: 0.8021
+Test result:
+ test_loss: 0.7611, accuracy: 0.6478, f1: 0.2018, coppa: 0.1166
+Starting epoch number 58
+Loss for Training on Epoch 58 is 0.25326332449913025
+Evaluating classifier
+Test result:
+ test_loss: 0.2378, accuracy: 0.9034, f1: 0.8865, coppa: 0.8025
+Test result:
+ test_loss: 0.7617, accuracy: 0.6475, f1: 0.2018, coppa: 0.1160
+Starting epoch number 59
+Loss for Training on Epoch 59 is 0.25196218490600586
+Evaluating classifier
+Test result:
+ test_loss: 0.2435, accuracy: 0.9037, f1: 0.8854, coppa: 0.8024
+Test result:
+ test_loss: 0.8341, accuracy: 0.6456, f1: 0.1869, coppa: 0.1082
+Starting epoch number 60
+Loss for Training on Epoch 60 is 0.251505970954895
+Evaluating classifier
+Test result:
+ test_loss: 0.2408, accuracy: 0.9046, f1: 0.8864, coppa: 0.8042
+Test result:
+ test_loss: 0.8225, accuracy: 0.6400, f1: 0.1607, coppa: 0.0906
+2022-05-04 09:01:46 Index:1, Model: WMM, train_site: 3, test_site: 3, type: L8
+Starting epoch number 1
+Loss for Training on Epoch 1 is 0.487577348947525
+Evaluating classifier
+Test result:
+ test_loss: 0.6135, accuracy: 0.7691, f1: 0.6557, coppa: 0.4888
+Test result:
+ test_loss: 0.6132, accuracy: 0.7314, f1: 0.5498, coppa: 0.3940
+Starting epoch number 2
+Loss for Training on Epoch 2 is 0.4047490060329437
+Evaluating classifier
+Test result:
+ test_loss: 0.4644, accuracy: 0.8056, f1: 0.7701, coppa: 0.6036
+Test result:
+ test_loss: 0.4503, accuracy: 0.8022, f1: 0.7731, coppa: 0.5989
+Starting epoch number 3
+Loss for Training on Epoch 3 is 0.3781774044036865
+Evaluating classifier
+Test result:
+ test_loss: 0.4523, accuracy: 0.7987, f1: 0.7777, coppa: 0.6003
+Test result:
+ test_loss: 0.4778, accuracy: 0.7779, f1: 0.7702, coppa: 0.5648
+Starting epoch number 4
+Loss for Training on Epoch 4 is 0.380099892616272
+Evaluating classifier
+Test result:
+ test_loss: 0.3797, accuracy: 0.8270, f1: 0.7979, coppa: 0.6488
+Test result:
+ test_loss: 0.4184, accuracy: 0.8098, f1: 0.7742, coppa: 0.6101
+Starting epoch number 5
+Loss for Training on Epoch 5 is 0.37151333689689636
+Evaluating classifier
+Test result:
+ test_loss: 0.3451, accuracy: 0.8503, f1: 0.8147, coppa: 0.6894
+Test result:
+ test_loss: 0.4128, accuracy: 0.8008, f1: 0.7417, coppa: 0.5805
+Starting epoch number 6
+Loss for Training on Epoch 6 is 0.3600133955478668
+Evaluating classifier
+Test result:
+ test_loss: 0.3368, accuracy: 0.8510, f1: 0.8083, coppa: 0.6865
+Test result:
+ test_loss: 0.4356, accuracy: 0.8113, f1: 0.7598, coppa: 0.6049
+Starting epoch number 7
+Loss for Training on Epoch 7 is 0.3476210832595825
+Evaluating classifier
+Test result:
+ test_loss: 0.3331, accuracy: 0.8568, f1: 0.8148, coppa: 0.6981
+Test result:
+ test_loss: 0.4160, accuracy: 0.8164, f1: 0.7609, coppa: 0.6129
+Starting epoch number 8
+Loss for Training on Epoch 8 is 0.3503338694572449
+Evaluating classifier
+Test result:
+ test_loss: 0.3419, accuracy: 0.8541, f1: 0.8212, coppa: 0.6985
+Test result:
+ test_loss: 0.4293, accuracy: 0.8209, f1: 0.7883, coppa: 0.6334
+Starting epoch number 9
+Loss for Training on Epoch 9 is 0.3540017902851105
+Evaluating classifier
+Test result:
+ test_loss: 0.3279, accuracy: 0.8592, f1: 0.8176, coppa: 0.7030
+Test result:
+ test_loss: 0.4415, accuracy: 0.8007, f1: 0.7360, coppa: 0.5777
+Starting epoch number 10
+Loss for Training on Epoch 10 is 0.3434625267982483
+Evaluating classifier
+Test result:
+ test_loss: 0.3232, accuracy: 0.8602, f1: 0.8185, coppa: 0.7048
+Test result:
+ test_loss: 0.4826, accuracy: 0.7740, f1: 0.6711, coppa: 0.5083
+Starting epoch number 11
+Loss for Training on Epoch 11 is 0.33985430002212524
+Evaluating classifier
+Test result:
+ test_loss: 0.3217, accuracy: 0.8626, f1: 0.8194, coppa: 0.7086
+Test result:
+ test_loss: 0.4115, accuracy: 0.8223, f1: 0.7763, coppa: 0.6291
+Starting epoch number 12
+Loss for Training on Epoch 12 is 0.34669363498687744
+Evaluating classifier
+Test result:
+ test_loss: 0.3260, accuracy: 0.8602, f1: 0.8260, coppa: 0.7093
+Test result:
+ test_loss: 0.3886, accuracy: 0.8167, f1: 0.7626, coppa: 0.6142
+Starting epoch number 13
+Loss for Training on Epoch 13 is 0.3354000449180603
+Evaluating classifier
+Test result:
+ test_loss: 0.3141, accuracy: 0.8643, f1: 0.8253, coppa: 0.7144
+Test result:
+ test_loss: 0.4329, accuracy: 0.7965, f1: 0.7288, coppa: 0.5681
+Starting epoch number 14
+Loss for Training on Epoch 14 is 0.3352956473827362
+Evaluating classifier
+Test result:
+ test_loss: 0.3318, accuracy: 0.8551, f1: 0.8089, coppa: 0.6923
+Test result:
+ test_loss: 0.3730, accuracy: 0.8362, f1: 0.8032, coppa: 0.6630
+Starting epoch number 15
+Loss for Training on Epoch 15 is 0.34130239486694336
+Evaluating classifier
+Test result:
+ test_loss: 0.3374, accuracy: 0.8577, f1: 0.8060, coppa: 0.6943
+Test result:
+ test_loss: 0.5014, accuracy: 0.7735, f1: 0.6684, coppa: 0.5066
+Starting epoch number 16
+Loss for Training on Epoch 16 is 0.3481591045856476
+Evaluating classifier
+Test result:
+ test_loss: 0.3181, accuracy: 0.8580, f1: 0.8070, coppa: 0.6954
+Test result:
+ test_loss: 0.4131, accuracy: 0.8107, f1: 0.7471, coppa: 0.5980
+Starting epoch number 17
+Loss for Training on Epoch 17 is 0.32917043566703796
+Evaluating classifier
+Test result:
+ test_loss: 0.3166, accuracy: 0.8627, f1: 0.8273, coppa: 0.7135
+Test result:
+ test_loss: 0.4096, accuracy: 0.8132, f1: 0.7734, coppa: 0.6146
+Epoch 00017: reducing learning rate of group 0 to 2.5000e-04.
+Starting epoch number 18
+Loss for Training on Epoch 18 is 0.32771337032318115
+Evaluating classifier
+Test result:
+ test_loss: 0.3001, accuracy: 0.8725, f1: 0.8341, coppa: 0.7306
+Test result:
+ test_loss: 0.4068, accuracy: 0.8025, f1: 0.7312, coppa: 0.5783
+Starting epoch number 19
+Loss for Training on Epoch 19 is 0.3236507773399353
+Evaluating classifier
+Test result:
+ test_loss: 0.2990, accuracy: 0.8726, f1: 0.8305, coppa: 0.7286
+Test result:
+ test_loss: 0.4010, accuracy: 0.8183, f1: 0.7621, coppa: 0.6163
+Starting epoch number 20
+Loss for Training on Epoch 20 is 0.31397709250450134
+Evaluating classifier
+Test result:
+ test_loss: 0.2962, accuracy: 0.8729, f1: 0.8383, coppa: 0.7337
+Test result:
+ test_loss: 0.4182, accuracy: 0.8253, f1: 0.7860, coppa: 0.6384
+Starting epoch number 21
+Loss for Training on Epoch 21 is 0.3107808232307434
+Evaluating classifier
+Test result:
+ test_loss: 0.2962, accuracy: 0.8719, f1: 0.8357, coppa: 0.7307
+Test result:
+ test_loss: 0.4180, accuracy: 0.8220, f1: 0.7787, coppa: 0.6299
+Starting epoch number 22
+Loss for Training on Epoch 22 is 0.31278878450393677
+Evaluating classifier
+Test result:
+ test_loss: 0.2940, accuracy: 0.8754, f1: 0.8368, coppa: 0.7360
+Test result:
+ test_loss: 0.4148, accuracy: 0.8174, f1: 0.7654, coppa: 0.6166
+Starting epoch number 23
+Loss for Training on Epoch 23 is 0.31472113728523254
+Evaluating classifier
+Test result:
+ test_loss: 0.2903, accuracy: 0.8755, f1: 0.8387, coppa: 0.7374
+Test result:
+ test_loss: 0.4017, accuracy: 0.8289, f1: 0.7905, coppa: 0.6459
+Starting epoch number 24
+Loss for Training on Epoch 24 is 0.3113987147808075
+Evaluating classifier
+Test result:
+ test_loss: 0.2924, accuracy: 0.8741, f1: 0.8392, coppa: 0.7357
+Test result:
+ test_loss: 0.3998, accuracy: 0.8284, f1: 0.7934, coppa: 0.6467
+Starting epoch number 25
+Loss for Training on Epoch 25 is 0.3110634982585907
+Evaluating classifier
+Test result:
+ test_loss: 0.2909, accuracy: 0.8751, f1: 0.8328, coppa: 0.7334
+Test result:
+ test_loss: 0.4133, accuracy: 0.8168, f1: 0.7608, coppa: 0.6134
+Starting epoch number 26
+Loss for Training on Epoch 26 is 0.31181350350379944
+Evaluating classifier
+Test result:
+ test_loss: 0.2904, accuracy: 0.8759, f1: 0.8415, coppa: 0.7396
+Test result:
+ test_loss: 0.3804, accuracy: 0.8306, f1: 0.7944, coppa: 0.6504
+Starting epoch number 27
+Loss for Training on Epoch 27 is 0.318133145570755
+Evaluating classifier
+Test result:
+ test_loss: 0.2867, accuracy: 0.8765, f1: 0.8372, coppa: 0.7377
+Test result:
+ test_loss: 0.3718, accuracy: 0.8314, f1: 0.7919, coppa: 0.6502
+Starting epoch number 28
+Loss for Training on Epoch 28 is 0.30539461970329285
+Evaluating classifier
+Test result:
+ test_loss: 0.2927, accuracy: 0.8755, f1: 0.8415, coppa: 0.7390
+Test result:
+ test_loss: 0.3895, accuracy: 0.8307, f1: 0.7921, coppa: 0.6494
+Starting epoch number 29
+Loss for Training on Epoch 29 is 0.3056444525718689
+Evaluating classifier
+Test result:
+ test_loss: 0.2864, accuracy: 0.8776, f1: 0.8391, coppa: 0.7404
+Test result:
+ test_loss: 0.4019, accuracy: 0.8293, f1: 0.7874, coppa: 0.6450
+Starting epoch number 30
+Loss for Training on Epoch 30 is 0.30896928906440735
+Evaluating classifier
+Test result:
+ test_loss: 0.2852, accuracy: 0.8786, f1: 0.8431, coppa: 0.7441
+Test result:
+ test_loss: 0.3863, accuracy: 0.8260, f1: 0.7831, coppa: 0.6380
+Starting epoch number 31
+Loss for Training on Epoch 31 is 0.31204208731651306
+Evaluating classifier
+Test result:
+ test_loss: 0.2820, accuracy: 0.8796, f1: 0.8435, coppa: 0.7456
+Test result:
+ test_loss: 0.3752, accuracy: 0.8274, f1: 0.7830, coppa: 0.6399
+Starting epoch number 32
+Loss for Training on Epoch 32 is 0.3016037344932556
+Evaluating classifier
+Test result:
+ test_loss: 0.2835, accuracy: 0.8786, f1: 0.8401, coppa: 0.7424
+Test result:
+ test_loss: 0.3860, accuracy: 0.8279, f1: 0.7806, coppa: 0.6395
+Starting epoch number 33
+Loss for Training on Epoch 33 is 0.30654677748680115
+Evaluating classifier
+Test result:
+ test_loss: 0.2831, accuracy: 0.8785, f1: 0.8418, coppa: 0.7433
+Test result:
+ test_loss: 0.4150, accuracy: 0.8167, f1: 0.7605, coppa: 0.6132
+Starting epoch number 34
+Loss for Training on Epoch 34 is 0.3049280643463135
+Evaluating classifier
+Test result:
+ test_loss: 0.2964, accuracy: 0.8734, f1: 0.8420, coppa: 0.7366
+Test result:
+ test_loss: 0.3829, accuracy: 0.8275, f1: 0.7934, coppa: 0.6455
+Starting epoch number 35
+Loss for Training on Epoch 35 is 0.30313268303871155
+Evaluating classifier
+Test result:
+ test_loss: 0.2847, accuracy: 0.8794, f1: 0.8410, coppa: 0.7440
+Test result:
+ test_loss: 0.3856, accuracy: 0.8294, f1: 0.7857, coppa: 0.6442
+Epoch 00035: reducing learning rate of group 0 to 6.2500e-05.
+Starting epoch number 36
+Loss for Training on Epoch 36 is 0.2918865382671356
+Evaluating classifier
+Test result:
+ test_loss: 0.2808, accuracy: 0.8810, f1: 0.8469, coppa: 0.7495
+Test result:
+ test_loss: 0.3760, accuracy: 0.8350, f1: 0.8008, coppa: 0.6600
+Starting epoch number 37
+Loss for Training on Epoch 37 is 0.2972719669342041
+Evaluating classifier
+Test result:
+ test_loss: 0.2770, accuracy: 0.8812, f1: 0.8438, coppa: 0.7480
+Test result:
+ test_loss: 0.3895, accuracy: 0.8279, f1: 0.7830, coppa: 0.6406
+Starting epoch number 38
+Loss for Training on Epoch 38 is 0.2997261583805084
+Evaluating classifier
+Test result:
+ test_loss: 0.2761, accuracy: 0.8814, f1: 0.8456, coppa: 0.7494
+Test result:
+ test_loss: 0.3692, accuracy: 0.8316, f1: 0.7929, coppa: 0.6510
+Starting epoch number 39
+Loss for Training on Epoch 39 is 0.2941123843193054
+Evaluating classifier
+Test result:
+ test_loss: 0.2804, accuracy: 0.8820, f1: 0.8469, coppa: 0.7509
+Test result:
+ test_loss: 0.3811, accuracy: 0.8293, f1: 0.7901, coppa: 0.6463
+Starting epoch number 40
+Loss for Training on Epoch 40 is 0.29846683144569397
+Evaluating classifier
+Test result:
+ test_loss: 0.2757, accuracy: 0.8815, f1: 0.8436, coppa: 0.7483
+Test result:
+ test_loss: 0.4126, accuracy: 0.8201, f1: 0.7680, coppa: 0.6218
+Starting epoch number 41
+Loss for Training on Epoch 41 is 0.29508811235427856
+Evaluating classifier
+Test result:
+ test_loss: 0.2742, accuracy: 0.8820, f1: 0.8474, coppa: 0.7512
+Test result:
+ test_loss: 0.3809, accuracy: 0.8295, f1: 0.7911, coppa: 0.6471
+Starting epoch number 42
+Loss for Training on Epoch 42 is 0.2979016900062561
+Evaluating classifier
+Test result:
+ test_loss: 0.2778, accuracy: 0.8819, f1: 0.8457, coppa: 0.7501
+Test result:
+ test_loss: 0.3837, accuracy: 0.8258, f1: 0.7807, coppa: 0.6365
+Starting epoch number 43
+Loss for Training on Epoch 43 is 0.28971919417381287
+Evaluating classifier
+Test result:
+ test_loss: 0.2723, accuracy: 0.8828, f1: 0.8495, coppa: 0.7535
+Test result:
+ test_loss: 0.3955, accuracy: 0.8339, f1: 0.7982, coppa: 0.6571
+Starting epoch number 44
+Loss for Training on Epoch 44 is 0.2898300588130951
+Evaluating classifier
+Test result:
+ test_loss: 0.2732, accuracy: 0.8831, f1: 0.8487, coppa: 0.7534
+Test result:
+ test_loss: 0.3860, accuracy: 0.8332, f1: 0.7988, coppa: 0.6564
+Starting epoch number 45
+Loss for Training on Epoch 45 is 0.3055975139141083
+Evaluating classifier
+Test result:
+ test_loss: 0.2726, accuracy: 0.8829, f1: 0.8467, coppa: 0.7521
+Test result:
+ test_loss: 0.3795, accuracy: 0.8291, f1: 0.7880, coppa: 0.6449
+Starting epoch number 46
+Loss for Training on Epoch 46 is 0.2936278283596039
+Evaluating classifier
+Test result:
+ test_loss: 0.2723, accuracy: 0.8832, f1: 0.8506, coppa: 0.7547
+Test result:
+ test_loss: 0.3810, accuracy: 0.8331, f1: 0.7986, coppa: 0.6562
+Starting epoch number 47
+Loss for Training on Epoch 47 is 0.289789617061615
+Evaluating classifier
+Test result:
+ test_loss: 0.2717, accuracy: 0.8836, f1: 0.8459, coppa: 0.7525
+Test result:
+ test_loss: 0.3833, accuracy: 0.8239, f1: 0.7765, coppa: 0.6315
+Starting epoch number 48
+Loss for Training on Epoch 48 is 0.29069459438323975
+Evaluating classifier
+Test result:
+ test_loss: 0.2737, accuracy: 0.8838, f1: 0.8500, coppa: 0.7552
+Test result:
+ test_loss: 0.3801, accuracy: 0.8293, f1: 0.7886, coppa: 0.6455
+Starting epoch number 49
+Loss for Training on Epoch 49 is 0.2933403253555298
+Evaluating classifier
+Test result:
+ test_loss: 0.2709, accuracy: 0.8839, f1: 0.8481, coppa: 0.7542
+Test result:
+ test_loss: 0.4083, accuracy: 0.8223, f1: 0.7743, coppa: 0.6281
+Starting epoch number 50
+Loss for Training on Epoch 50 is 0.2906891703605652
+Evaluating classifier
+Test result:
+ test_loss: 0.2714, accuracy: 0.8839, f1: 0.8496, coppa: 0.7551
+Test result:
+ test_loss: 0.4243, accuracy: 0.8320, f1: 0.7942, coppa: 0.6523
+Starting epoch number 51
+Loss for Training on Epoch 51 is 0.2975759506225586
+Evaluating classifier
+Test result:
+ test_loss: 0.2755, accuracy: 0.8837, f1: 0.8461, coppa: 0.7527
+Test result:
+ test_loss: 0.4093, accuracy: 0.8239, f1: 0.7758, coppa: 0.6312
+Starting epoch number 52
+Loss for Training on Epoch 52 is 0.2898550033569336
+Evaluating classifier
+Test result:
+ test_loss: 0.2725, accuracy: 0.8845, f1: 0.8481, coppa: 0.7550
+Test result:
+ test_loss: 0.3769, accuracy: 0.8308, f1: 0.7910, coppa: 0.6489
+Starting epoch number 53
+Loss for Training on Epoch 53 is 0.28551429510116577
+Evaluating classifier
+Test result:
+ test_loss: 0.2689, accuracy: 0.8850, f1: 0.8491, coppa: 0.7562
+Test result:
+ test_loss: 0.3780, accuracy: 0.8295, f1: 0.7889, coppa: 0.6459
+Starting epoch number 54
+Loss for Training on Epoch 54 is 0.29374003410339355
+Evaluating classifier
+Test result:
+ test_loss: 0.2706, accuracy: 0.8849, f1: 0.8518, coppa: 0.7577
+Test result:
+ test_loss: 0.3927, accuracy: 0.8332, f1: 0.8021, coppa: 0.6582
+Starting epoch number 55
+Loss for Training on Epoch 55 is 0.2858859896659851
+Evaluating classifier
+Test result:
+ test_loss: 0.2744, accuracy: 0.8842, f1: 0.8459, coppa: 0.7533
+Test result:
+ test_loss: 0.4096, accuracy: 0.8198, f1: 0.7685, coppa: 0.6217
+Starting epoch number 56
+Loss for Training on Epoch 56 is 0.2895524203777313
+Evaluating classifier
+Test result:
+ test_loss: 0.2696, accuracy: 0.8844, f1: 0.8499, coppa: 0.7559
+Test result:
+ test_loss: 0.4229, accuracy: 0.8245, f1: 0.7816, coppa: 0.6350
+Starting epoch number 57
+Loss for Training on Epoch 57 is 0.2883264422416687
+Evaluating classifier
+Test result:
+ test_loss: 0.2729, accuracy: 0.8819, f1: 0.8520, coppa: 0.7539
+Test result:
+ test_loss: 0.4184, accuracy: 0.8296, f1: 0.7988, coppa: 0.6513
+Epoch 00057: reducing learning rate of group 0 to 1.5625e-05.
+Starting epoch number 58
+Loss for Training on Epoch 58 is 0.2861497402191162
+Evaluating classifier
+Test result:
+ test_loss: 0.2703, accuracy: 0.8852, f1: 0.8518, coppa: 0.7581
+Test result:
+ test_loss: 0.3884, accuracy: 0.8306, f1: 0.7947, coppa: 0.6505
+Starting epoch number 59
+Loss for Training on Epoch 59 is 0.286704957485199
+Evaluating classifier
+Test result:
+ test_loss: 0.2659, accuracy: 0.8869, f1: 0.8521, coppa: 0.7605
+Test result:
+ test_loss: 0.4038, accuracy: 0.8278, f1: 0.7840, coppa: 0.6410
+Starting epoch number 60
+Loss for Training on Epoch 60 is 0.2790011465549469
+Evaluating classifier
+Test result:
+ test_loss: 0.2688, accuracy: 0.8861, f1: 0.8532, coppa: 0.7601
+Test result:
+ test_loss: 0.4062, accuracy: 0.8286, f1: 0.7895, coppa: 0.6450
+2022-05-04 09:51:25 Index:2, Model: WMM, train_site: 5, test_site: 5, type: L8
+Starting epoch number 1
+Loss for Training on Epoch 1 is 0.2896290421485901
+Evaluating classifier
+Test result:
+ test_loss: 0.3295, accuracy: 0.9323, f1: 0.8469, coppa: 0.8036
+Test result:
+ test_loss: 0.3783, accuracy: 0.9354, f1: 0.8762, coppa: 0.8325
+Starting epoch number 2
+Loss for Training on Epoch 2 is 0.160933718085289
+Evaluating classifier
+Test result:
+ test_loss: 0.1606, accuracy: 0.9456, f1: 0.8763, coppa: 0.8416
+Test result:
+ test_loss: 0.2315, accuracy: 0.9150, f1: 0.8134, coppa: 0.7594
+Starting epoch number 3
+Loss for Training on Epoch 3 is 0.1339346319437027
+Evaluating classifier
+Test result:
+ test_loss: 0.1306, accuracy: 0.9554, f1: 0.9012, coppa: 0.8724
+Test result:
+ test_loss: 0.1741, accuracy: 0.9468, f1: 0.8932, coppa: 0.8578
+Starting epoch number 4
+Loss for Training on Epoch 4 is 0.12035460025072098
+Evaluating classifier
+Test result:
+ test_loss: 0.1182, accuracy: 0.9595, f1: 0.9147, coppa: 0.8882
+Test result:
+ test_loss: 0.1664, accuracy: 0.9497, f1: 0.9066, coppa: 0.8724
+Starting epoch number 5
+Loss for Training on Epoch 5 is 0.11899277567863464
+Evaluating classifier
+Test result:
+ test_loss: 4.8987, accuracy: 0.7813, f1: 0.1131, coppa: 0.0879
+Test result:
+ test_loss: 16.5020, accuracy: 0.7475, f1: 0.0196, coppa: 0.0144
+Starting epoch number 6
+Loss for Training on Epoch 6 is 0.12119755893945694
+Evaluating classifier
+Test result:
+ test_loss: 0.1311, accuracy: 0.9528, f1: 0.9023, coppa: 0.8712
+Test result:
+ test_loss: 0.2136, accuracy: 0.9232, f1: 0.8655, coppa: 0.8126
+Starting epoch number 7
+Loss for Training on Epoch 7 is 0.11997559666633606
+Evaluating classifier
+Test result:
+ test_loss: 0.1077, accuracy: 0.9619, f1: 0.9163, coppa: 0.8917
+Test result:
+ test_loss: 0.1988, accuracy: 0.9172, f1: 0.8317, coppa: 0.7769
+Starting epoch number 8
+Loss for Training on Epoch 8 is 0.11436154693365097
+Evaluating classifier
+Test result:
+ test_loss: 0.1275, accuracy: 0.9569, f1: 0.9116, coppa: 0.8832
+Test result:
+ test_loss: 0.2650, accuracy: 0.8877, f1: 0.8143, coppa: 0.7367
+Starting epoch number 9
+Loss for Training on Epoch 9 is 0.10423575341701508
+Evaluating classifier
+Test result:
+ test_loss: 0.1351, accuracy: 0.9623, f1: 0.9188, coppa: 0.8943
+Test result:
+ test_loss: 1.3664, accuracy: 0.8724, f1: 0.7503, coppa: 0.6646
+Starting epoch number 10
+Loss for Training on Epoch 10 is 0.10349899530410767
+Evaluating classifier
+Test result:
+ test_loss: 0.1087, accuracy: 0.9617, f1: 0.9146, coppa: 0.8899
+Test result:
+ test_loss: 0.1687, accuracy: 0.9374, f1: 0.8778, coppa: 0.8357
+Starting epoch number 11
+Loss for Training on Epoch 11 is 0.10471927374601364
+Evaluating classifier
+Test result:
+ test_loss: 0.1033, accuracy: 0.9641, f1: 0.9240, coppa: 0.9006
+Test result:
+ test_loss: 0.2311, accuracy: 0.9161, f1: 0.8287, coppa: 0.7733
+Starting epoch number 12
+Loss for Training on Epoch 12 is 0.1068764254450798
+Evaluating classifier
+Test result:
+ test_loss: 0.0997, accuracy: 0.9642, f1: 0.9243, coppa: 0.9009
+Test result:
+ test_loss: 0.2150, accuracy: 0.9140, f1: 0.8534, coppa: 0.7940
+Starting epoch number 13
+Loss for Training on Epoch 13 is 0.09914502501487732
+Evaluating classifier
+Test result:
+ test_loss: 0.0947, accuracy: 0.9670, f1: 0.9292, coppa: 0.9077
+Test result:
+ test_loss: 0.2302, accuracy: 0.9056, f1: 0.8053, coppa: 0.7433
+Starting epoch number 14
+Loss for Training on Epoch 14 is 0.09634867310523987
+Evaluating classifier
+Test result:
+ test_loss: 0.0965, accuracy: 0.9660, f1: 0.9284, coppa: 0.9061
+Test result:
+ test_loss: 0.1572, accuracy: 0.9409, f1: 0.8920, coppa: 0.8516
+Starting epoch number 15
+Loss for Training on Epoch 15 is 0.09618882089853287
+Evaluating classifier
+Test result:
+ test_loss: 0.0962, accuracy: 0.9657, f1: 0.9278, coppa: 0.9053
+Test result:
+ test_loss: 0.1574, accuracy: 0.9406, f1: 0.8859, coppa: 0.8458
+Starting epoch number 16
+Loss for Training on Epoch 16 is 0.10168501734733582
+Evaluating classifier
+Test result:
+ test_loss: 0.1184, accuracy: 0.9645, f1: 0.9228, coppa: 0.8998
+Test result:
+ test_loss: 0.1666, accuracy: 0.9409, f1: 0.8795, coppa: 0.8405
+Starting epoch number 17
+Loss for Training on Epoch 17 is 0.09836520999670029
+Evaluating classifier
+Test result:
+ test_loss: 0.4881, accuracy: 0.9255, f1: 0.8184, coppa: 0.7726
+Test result:
+ test_loss: 1.0789, accuracy: 0.8352, f1: 0.5503, coppa: 0.4676
+Epoch 00017: reducing learning rate of group 0 to 2.5000e-04.
+Starting epoch number 18
+Loss for Training on Epoch 18 is 0.09317967295646667
+Evaluating classifier
+Test result:
+ test_loss: 0.0908, accuracy: 0.9689, f1: 0.9337, coppa: 0.9134
+Test result:
+ test_loss: 0.1335, accuracy: 0.9546, f1: 0.9122, coppa: 0.8816
+Starting epoch number 19
+Loss for Training on Epoch 19 is 0.08805077522993088
+Evaluating classifier
+Test result:
+ test_loss: 0.0854, accuracy: 0.9698, f1: 0.9353, coppa: 0.9156
+Test result:
+ test_loss: 0.1568, accuracy: 0.9383, f1: 0.8833, coppa: 0.8414
+Starting epoch number 20
+Loss for Training on Epoch 20 is 0.08764567226171494
+Evaluating classifier
+Test result:
+ test_loss: 0.0836, accuracy: 0.9702, f1: 0.9355, coppa: 0.9161
+Test result:
+ test_loss: 0.1518, accuracy: 0.9424, f1: 0.8882, coppa: 0.8494
+Starting epoch number 21
+Loss for Training on Epoch 21 is 0.0847465842962265
+Evaluating classifier
+Test result:
+ test_loss: 0.0835, accuracy: 0.9704, f1: 0.9362, coppa: 0.9169
+Test result:
+ test_loss: 0.1332, accuracy: 0.9532, f1: 0.9102, coppa: 0.8786
+Starting epoch number 22
+Loss for Training on Epoch 22 is 0.0841822475194931
+Evaluating classifier
+Test result:
+ test_loss: 0.0837, accuracy: 0.9709, f1: 0.9366, coppa: 0.9177
+Test result:
+ test_loss: 0.1534, accuracy: 0.9423, f1: 0.8851, coppa: 0.8466
+Starting epoch number 23
+Loss for Training on Epoch 23 is 0.08555009216070175
+Evaluating classifier
+Test result:
+ test_loss: 0.0809, accuracy: 0.9710, f1: 0.9371, coppa: 0.9183
+Test result:
+ test_loss: 0.1370, accuracy: 0.9477, f1: 0.9000, coppa: 0.8646
+Starting epoch number 24
+Loss for Training on Epoch 24 is 0.09573937952518463
+Evaluating classifier
+Test result:
+ test_loss: 0.0824, accuracy: 0.9712, f1: 0.9374, coppa: 0.9186
+Test result:
+ test_loss: 0.1653, accuracy: 0.9357, f1: 0.8734, coppa: 0.8303
+Starting epoch number 25
+Loss for Training on Epoch 25 is 0.0921759083867073
+Evaluating classifier
+Test result:
+ test_loss: 3.4816, accuracy: 0.8247, f1: 0.4054, coppa: 0.3401
+Test result:
+ test_loss: 35.3701, accuracy: 0.7474, f1: 0.0198, coppa: 0.0142
+Starting epoch number 26
+Loss for Training on Epoch 26 is 0.0860011950135231
+Evaluating classifier
+Test result:
+ test_loss: 0.0851, accuracy: 0.9700, f1: 0.9347, coppa: 0.9153
+Test result:
+ test_loss: 0.1524, accuracy: 0.9392, f1: 0.8838, coppa: 0.8426
+Starting epoch number 27
+Loss for Training on Epoch 27 is 0.08523544669151306
+Evaluating classifier
+Test result:
+ test_loss: 0.0791, accuracy: 0.9719, f1: 0.9394, coppa: 0.9211
+Test result:
+ test_loss: 0.1598, accuracy: 0.9373, f1: 0.8786, coppa: 0.8364
+Starting epoch number 28
+Loss for Training on Epoch 28 is 0.0827280580997467
+Evaluating classifier
+Test result:
+ test_loss: 0.0781, accuracy: 0.9715, f1: 0.9385, coppa: 0.9199
+Test result:
+ test_loss: 0.1617, accuracy: 0.9372, f1: 0.8803, coppa: 0.8378
+Starting epoch number 29
+Loss for Training on Epoch 29 is 0.08588233590126038
+Evaluating classifier
+Test result:
+ test_loss: 1.4918, accuracy: 0.9047, f1: 0.7534, coppa: 0.6973
+Test result:
+ test_loss: 5.2484, accuracy: 0.7698, f1: 0.1865, coppa: 0.1431
+Starting epoch number 30
+Loss for Training on Epoch 30 is 0.08125848323106766
+Evaluating classifier
+Test result:
+ test_loss: 0.0808, accuracy: 0.9709, f1: 0.9379, coppa: 0.9189
+Test result:
+ test_loss: 0.1423, accuracy: 0.9465, f1: 0.8927, coppa: 0.8572
+Starting epoch number 31
+Loss for Training on Epoch 31 is 0.08249198645353317
+Evaluating classifier
+Test result:
+ test_loss: 0.0806, accuracy: 0.9716, f1: 0.9395, coppa: 0.9209
+Test result:
+ test_loss: 0.1446, accuracy: 0.9468, f1: 0.8988, coppa: 0.8628
+Starting epoch number 32
+Loss for Training on Epoch 32 is 0.08030623942613602
+Evaluating classifier
+Test result:
+ test_loss: 0.0811, accuracy: 0.9710, f1: 0.9385, coppa: 0.9196
+Test result:
+ test_loss: 0.1244, accuracy: 0.9558, f1: 0.9142, coppa: 0.8844
+Epoch 00032: reducing learning rate of group 0 to 6.2500e-05.
+Starting epoch number 33
+Loss for Training on Epoch 33 is 0.07944188266992569
+Evaluating classifier
+Test result:
+ test_loss: 0.0760, accuracy: 0.9731, f1: 0.9412, coppa: 0.9238
+Test result:
+ test_loss: 0.2408, accuracy: 0.8990, f1: 0.7639, coppa: 0.7026
+Starting epoch number 34
+Loss for Training on Epoch 34 is 0.0764450952410698
+Evaluating classifier
+Test result:
+ test_loss: 0.0765, accuracy: 0.9728, f1: 0.9420, coppa: 0.9242
+Test result:
+ test_loss: 0.1567, accuracy: 0.9392, f1: 0.8756, coppa: 0.8354
+Starting epoch number 35
+Loss for Training on Epoch 35 is 0.07713569700717926
+Evaluating classifier
+Test result:
+ test_loss: 0.0720, accuracy: 0.9740, f1: 0.9440, coppa: 0.9271
+Test result:
+ test_loss: 0.1461, accuracy: 0.9445, f1: 0.8872, coppa: 0.8504
+Starting epoch number 36
+Loss for Training on Epoch 36 is 0.07541805505752563
+Evaluating classifier
+Test result:
+ test_loss: 0.0726, accuracy: 0.9746, f1: 0.9450, coppa: 0.9285
+Test result:
+ test_loss: 0.1612, accuracy: 0.9389, f1: 0.8734, coppa: 0.8333
+Starting epoch number 37
+Loss for Training on Epoch 37 is 0.07439690083265305
+Evaluating classifier
+Test result:
+ test_loss: 0.0710, accuracy: 0.9747, f1: 0.9451, coppa: 0.9286
+Test result:
+ test_loss: 0.1576, accuracy: 0.9398, f1: 0.8758, coppa: 0.8362
+Starting epoch number 38
+Loss for Training on Epoch 38 is 0.07429969310760498
+Evaluating classifier
+Test result:
+ test_loss: 0.0712, accuracy: 0.9747, f1: 0.9453, coppa: 0.9288
+Test result:
+ test_loss: 0.1404, accuracy: 0.9479, f1: 0.8954, coppa: 0.8607
+Starting epoch number 39
+Loss for Training on Epoch 39 is 0.07484700530767441
+Evaluating classifier
+Test result:
+ test_loss: 0.0715, accuracy: 0.9749, f1: 0.9458, coppa: 0.9294
+Test result:
+ test_loss: 0.1426, accuracy: 0.9454, f1: 0.8902, coppa: 0.8538
+Starting epoch number 40
+Loss for Training on Epoch 40 is 0.07305401563644409
+Evaluating classifier
+Test result:
+ test_loss: 0.0692, accuracy: 0.9748, f1: 0.9459, coppa: 0.9295
+Test result:
+ test_loss: 0.1491, accuracy: 0.9455, f1: 0.8904, coppa: 0.8541
+Starting epoch number 41
+Loss for Training on Epoch 41 is 0.07300695031881332
+Evaluating classifier
+Test result:
+ test_loss: 0.0699, accuracy: 0.9755, f1: 0.9467, coppa: 0.9308
+Test result:
+ test_loss: 0.1603, accuracy: 0.9380, f1: 0.8711, coppa: 0.8305
+Starting epoch number 42
+Loss for Training on Epoch 42 is 0.07172642648220062
+Evaluating classifier
+Test result:
+ test_loss: 0.0693, accuracy: 0.9754, f1: 0.9471, coppa: 0.9311
+Test result:
+ test_loss: 0.1455, accuracy: 0.9455, f1: 0.8907, coppa: 0.8544
+Starting epoch number 43
+Loss for Training on Epoch 43 is 0.07573121041059494
+Evaluating classifier
+Test result:
+ test_loss: 0.0738, accuracy: 0.9755, f1: 0.9466, coppa: 0.9307
+Test result:
+ test_loss: 0.2956, accuracy: 0.9005, f1: 0.7709, coppa: 0.7098
+Starting epoch number 44
+Loss for Training on Epoch 44 is 0.07897928357124329
+Evaluating classifier
+Test result:
+ test_loss: 0.0701, accuracy: 0.9758, f1: 0.9476, coppa: 0.9319
+Test result:
+ test_loss: 0.1548, accuracy: 0.9432, f1: 0.8858, coppa: 0.8480
+Epoch 00044: reducing learning rate of group 0 to 1.5625e-05.
+Starting epoch number 45
+Loss for Training on Epoch 45 is 0.07131745666265488
+Evaluating classifier
+Test result:
+ test_loss: 0.0675, accuracy: 0.9761, f1: 0.9484, coppa: 0.9328
+Test result:
+ test_loss: 0.1477, accuracy: 0.9441, f1: 0.8875, coppa: 0.8504
+Starting epoch number 46
+Loss for Training on Epoch 46 is 0.07164757698774338
+Evaluating classifier
+Test result:
+ test_loss: 0.0675, accuracy: 0.9760, f1: 0.9484, coppa: 0.9327
+Test result:
+ test_loss: 0.1464, accuracy: 0.9466, f1: 0.8944, coppa: 0.8587
+Starting epoch number 47
+Loss for Training on Epoch 47 is 0.07009562104940414
+Evaluating classifier
+Test result:
+ test_loss: 0.0683, accuracy: 0.9762, f1: 0.9482, coppa: 0.9328
+Test result:
+ test_loss: 0.1410, accuracy: 0.9481, f1: 0.8960, coppa: 0.8615
+Starting epoch number 48
+Loss for Training on Epoch 48 is 0.07466715574264526
+Evaluating classifier
+Test result:
+ test_loss: 0.0663, accuracy: 0.9764, f1: 0.9488, coppa: 0.9335
+Test result:
+ test_loss: 0.1501, accuracy: 0.9455, f1: 0.8900, coppa: 0.8538
+Starting epoch number 49
+Loss for Training on Epoch 49 is 0.07045987993478775
+Evaluating classifier
+Test result:
+ test_loss: 0.0668, accuracy: 0.9764, f1: 0.9491, coppa: 0.9337
+Test result:
+ test_loss: 0.1796, accuracy: 0.9332, f1: 0.8638, coppa: 0.8197
+Starting epoch number 50
+Loss for Training on Epoch 50 is 0.0687994509935379
+Evaluating classifier
+Test result:
+ test_loss: 0.0664, accuracy: 0.9764, f1: 0.9491, coppa: 0.9338
+Test result:
+ test_loss: 0.1671, accuracy: 0.9372, f1: 0.8713, coppa: 0.8299
+Starting epoch number 51
+Loss for Training on Epoch 51 is 0.0699128583073616
+Evaluating classifier
+Test result:
+ test_loss: 0.0665, accuracy: 0.9766, f1: 0.9494, coppa: 0.9342
+Test result:
+ test_loss: 0.1612, accuracy: 0.9377, f1: 0.8715, coppa: 0.8305
+Starting epoch number 52
+Loss for Training on Epoch 52 is 0.06966147571802139
+Evaluating classifier
+Test result:
+ test_loss: 0.0664, accuracy: 0.9767, f1: 0.9495, coppa: 0.9343
+Test result:
+ test_loss: 0.1677, accuracy: 0.9371, f1: 0.8695, coppa: 0.8283
+Epoch 00052: reducing learning rate of group 0 to 3.9063e-06.
+Starting epoch number 53
+Loss for Training on Epoch 53 is 0.06859567016363144
+Evaluating classifier
+Test result:
+ test_loss: 0.0682, accuracy: 0.9768, f1: 0.9499, coppa: 0.9348
+Test result:
+ test_loss: 0.1720, accuracy: 0.9363, f1: 0.8689, coppa: 0.8270
+Starting epoch number 54
+Loss for Training on Epoch 54 is 0.0698704645037651
+Evaluating classifier
+Test result:
+ test_loss: 0.0662, accuracy: 0.9765, f1: 0.9493, coppa: 0.9340
+Test result:
+ test_loss: 0.1464, accuracy: 0.9439, f1: 0.8870, coppa: 0.8497
+Starting epoch number 55
+Loss for Training on Epoch 55 is 0.07082201540470123
+Evaluating classifier
+Test result:
+ test_loss: 0.0659, accuracy: 0.9767, f1: 0.9494, coppa: 0.9343
+Test result:
+ test_loss: 0.1634, accuracy: 0.9396, f1: 0.8761, coppa: 0.8363
+Starting epoch number 56
+Loss for Training on Epoch 56 is 0.06958433240652084
+Evaluating classifier
+Test result:
+ test_loss: 0.0659, accuracy: 0.9766, f1: 0.9492, coppa: 0.9340
+Test result:
+ test_loss: 0.1527, accuracy: 0.9455, f1: 0.8907, coppa: 0.8544
+Starting epoch number 57
+Loss for Training on Epoch 57 is 0.06829937547445297
+Evaluating classifier
+Test result:
+ test_loss: 0.0665, accuracy: 0.9768, f1: 0.9498, coppa: 0.9347
+Test result:
+ test_loss: 0.1478, accuracy: 0.9448, f1: 0.8890, coppa: 0.8524
+Starting epoch number 58
+Loss for Training on Epoch 58 is 0.07045423984527588
+Evaluating classifier
+Test result:
+ test_loss: 0.0666, accuracy: 0.9767, f1: 0.9496, coppa: 0.9345
+Test result:
+ test_loss: 0.1508, accuracy: 0.9439, f1: 0.8872, coppa: 0.8498
+Starting epoch number 59
+Loss for Training on Epoch 59 is 0.0700298324227333
+Evaluating classifier
+Test result:
+ test_loss: 0.0663, accuracy: 0.9767, f1: 0.9494, coppa: 0.9342
+Test result:
+ test_loss: 0.1603, accuracy: 0.9413, f1: 0.8802, coppa: 0.8414
+Epoch 00059: reducing learning rate of group 0 to 9.7656e-07.
+Starting epoch number 60
+Loss for Training on Epoch 60 is 0.07033972442150116
+Evaluating classifier
+Test result:
+ test_loss: 0.0660, accuracy: 0.9768, f1: 0.9498, coppa: 0.9348
+Test result:
+ test_loss: 0.1636, accuracy: 0.9385, f1: 0.8734, coppa: 0.8330
+2022-05-04 10:59:10 Index:3, Model: WMM, train_site: 7, test_site: 7, type: L8
+Starting epoch number 1
+Loss for Training on Epoch 1 is 0.4454898238182068
+Evaluating classifier
+Test result:
+ test_loss: 0.6684, accuracy: 0.5946, f1: 0.7022, coppa: 0.2066
+Test result:
+ test_loss: 0.6723, accuracy: 0.5009, f1: 0.6554, coppa: 0.0440
+Starting epoch number 2
+Loss for Training on Epoch 2 is 0.3514615595340729
+Evaluating classifier
+Test result:
+ test_loss: 0.5273, accuracy: 0.8048, f1: 0.8244, coppa: 0.6124
+Test result:
+ test_loss: 0.5946, accuracy: 0.6402, f1: 0.7226, coppa: 0.3014
+Starting epoch number 3
+Loss for Training on Epoch 3 is 0.33521124720573425
+Evaluating classifier
+Test result:
+ test_loss: 0.3797, accuracy: 0.8662, f1: 0.8659, coppa: 0.7326
+Test result:
+ test_loss: 0.5099, accuracy: 0.7617, f1: 0.7910, coppa: 0.5306
+Starting epoch number 4
+Loss for Training on Epoch 4 is 0.32846394181251526
+Evaluating classifier
+Test result:
+ test_loss: 0.3379, accuracy: 0.8678, f1: 0.8677, coppa: 0.7358
+Test result:
+ test_loss: 0.5091, accuracy: 0.7508, f1: 0.7837, coppa: 0.5097
+Starting epoch number 5
+Loss for Training on Epoch 5 is 0.32000622153282166
+Evaluating classifier
+Test result:
+ test_loss: 0.3120, accuracy: 0.8742, f1: 0.8681, coppa: 0.7479
+Test result:
+ test_loss: 0.4077, accuracy: 0.8200, f1: 0.8262, coppa: 0.6420
+Starting epoch number 6
+Loss for Training on Epoch 6 is 0.3146475851535797
+Evaluating classifier
+Test result:
+ test_loss: 0.3183, accuracy: 0.8746, f1: 0.8735, coppa: 0.7493
+Test result:
+ test_loss: 0.4219, accuracy: 0.8193, f1: 0.8271, coppa: 0.6409
+Starting epoch number 7
+Loss for Training on Epoch 7 is 0.30950605869293213
+Evaluating classifier
+Test result:
+ test_loss: 0.3082, accuracy: 0.8738, f1: 0.8678, coppa: 0.7471
+Test result:
+ test_loss: 0.4029, accuracy: 0.8342, f1: 0.8294, coppa: 0.6683
+Starting epoch number 8
+Loss for Training on Epoch 8 is 0.3055678904056549
+Evaluating classifier
+Test result:
+ test_loss: 0.2952, accuracy: 0.8786, f1: 0.8737, coppa: 0.7569
+Test result:
+ test_loss: 0.4007, accuracy: 0.8364, f1: 0.8321, coppa: 0.6728
+Starting epoch number 9
+Loss for Training on Epoch 9 is 0.2999459505081177
+Evaluating classifier
+Test result:
+ test_loss: 0.2940, accuracy: 0.8791, f1: 0.8745, coppa: 0.7580
+Test result:
+ test_loss: 0.3872, accuracy: 0.8433, f1: 0.8360, coppa: 0.6859
+Starting epoch number 10
+Loss for Training on Epoch 10 is 0.303591787815094
+Evaluating classifier
+Test result:
+ test_loss: 0.3776, accuracy: 0.8510, f1: 0.8318, coppa: 0.7003
+Test result:
+ test_loss: 0.4546, accuracy: 0.8005, f1: 0.7785, coppa: 0.5981
+Starting epoch number 11
+Loss for Training on Epoch 11 is 0.2994103729724884
+Evaluating classifier
+Test result:
+ test_loss: 0.2978, accuracy: 0.8789, f1: 0.8715, coppa: 0.7571
+Test result:
+ test_loss: 0.4006, accuracy: 0.8368, f1: 0.8313, coppa: 0.6733
+Starting epoch number 12
+Loss for Training on Epoch 12 is 0.2958441972732544
+Evaluating classifier
+Test result:
+ test_loss: 0.2936, accuracy: 0.8813, f1: 0.8796, coppa: 0.7626
+Test result:
+ test_loss: 0.3833, accuracy: 0.8377, f1: 0.8388, coppa: 0.6763
+Starting epoch number 13
+Loss for Training on Epoch 13 is 0.2922474145889282
+Evaluating classifier
+Test result:
+ test_loss: 0.2817, accuracy: 0.8834, f1: 0.8790, coppa: 0.7664
+Test result:
+ test_loss: 0.3899, accuracy: 0.8420, f1: 0.8380, coppa: 0.6840
+Starting epoch number 14
+Loss for Training on Epoch 14 is 0.2897456884384155
+Evaluating classifier
+Test result:
+ test_loss: 0.2801, accuracy: 0.8830, f1: 0.8771, coppa: 0.7655
+Test result:
+ test_loss: 0.3839, accuracy: 0.8494, f1: 0.8399, coppa: 0.6978
+Starting epoch number 15
+Loss for Training on Epoch 15 is 0.28850680589675903
+Evaluating classifier
+Test result:
+ test_loss: 0.2901, accuracy: 0.8821, f1: 0.8753, coppa: 0.7636
+Test result:
+ test_loss: 0.4244, accuracy: 0.8072, f1: 0.7808, coppa: 0.6108
+Starting epoch number 16
+Loss for Training on Epoch 16 is 0.2853042185306549
+Evaluating classifier
+Test result:
+ test_loss: 0.2773, accuracy: 0.8844, f1: 0.8793, coppa: 0.7684
+Test result:
+ test_loss: 0.4003, accuracy: 0.8363, f1: 0.8297, coppa: 0.6721
+Starting epoch number 17
+Loss for Training on Epoch 17 is 0.2933635115623474
+Evaluating classifier
+Test result:
+ test_loss: 0.2932, accuracy: 0.8822, f1: 0.8755, coppa: 0.7638
+Test result:
+ test_loss: 0.3885, accuracy: 0.8431, f1: 0.8374, coppa: 0.6859
+Starting epoch number 18
+Loss for Training on Epoch 18 is 0.29089540243148804
+Evaluating classifier
+Test result:
+ test_loss: 0.2798, accuracy: 0.8847, f1: 0.8807, coppa: 0.7691
+Test result:
+ test_loss: 0.4203, accuracy: 0.8158, f1: 0.7949, coppa: 0.6288
+Starting epoch number 19
+Loss for Training on Epoch 19 is 0.28432032465934753
+Evaluating classifier
+Test result:
+ test_loss: 0.2948, accuracy: 0.8796, f1: 0.8792, coppa: 0.7595
+Test result:
+ test_loss: 0.4636, accuracy: 0.8066, f1: 0.8093, coppa: 0.6145
+Starting epoch number 20
+Loss for Training on Epoch 20 is 0.28385359048843384
+Evaluating classifier
+Test result:
+ test_loss: 0.2694, accuracy: 0.8883, f1: 0.8841, coppa: 0.7764
+Test result:
+ test_loss: 0.4128, accuracy: 0.8210, f1: 0.8027, coppa: 0.6396
+Starting epoch number 21
+Loss for Training on Epoch 21 is 0.2803511917591095
+Evaluating classifier
+Test result:
+ test_loss: 0.2716, accuracy: 0.8889, f1: 0.8846, coppa: 0.7776
+Test result:
+ test_loss: 0.4075, accuracy: 0.8250, f1: 0.8114, coppa: 0.6483
+Starting epoch number 22
+Loss for Training on Epoch 22 is 0.27538853883743286
+Evaluating classifier
+Test result:
+ test_loss: 0.2729, accuracy: 0.8860, f1: 0.8788, coppa: 0.7714
+Test result:
+ test_loss: 0.3914, accuracy: 0.8511, f1: 0.8418, coppa: 0.7011
+Starting epoch number 23
+Loss for Training on Epoch 23 is 0.2808089256286621
+Evaluating classifier
+Test result:
+ test_loss: 0.2748, accuracy: 0.8849, f1: 0.8829, coppa: 0.7698
+Test result:
+ test_loss: 0.4087, accuracy: 0.8240, f1: 0.8246, coppa: 0.6488
+Starting epoch number 24
+Loss for Training on Epoch 24 is 0.2891223430633545
+Evaluating classifier
+Test result:
+ test_loss: 0.2738, accuracy: 0.8865, f1: 0.8792, coppa: 0.7724
+Test result:
+ test_loss: 0.4306, accuracy: 0.8099, f1: 0.7808, coppa: 0.6158
+Epoch 00024: reducing learning rate of group 0 to 2.5000e-04.
+Starting epoch number 25
+Loss for Training on Epoch 25 is 0.27295127511024475
+Evaluating classifier
+Test result:
+ test_loss: 0.2616, accuracy: 0.8904, f1: 0.8860, coppa: 0.7805
+Test result:
+ test_loss: 0.3753, accuracy: 0.8458, f1: 0.8345, coppa: 0.6904
+Starting epoch number 26
+Loss for Training on Epoch 26 is 0.26393795013427734
+Evaluating classifier
+Test result:
+ test_loss: 0.2568, accuracy: 0.8928, f1: 0.8881, coppa: 0.7853
+Test result:
+ test_loss: 0.3855, accuracy: 0.8471, f1: 0.8357, coppa: 0.6930
+Starting epoch number 27
+Loss for Training on Epoch 27 is 0.26258519291877747
+Evaluating classifier
+Test result:
+ test_loss: 0.2530, accuracy: 0.8937, f1: 0.8895, coppa: 0.7872
+Test result:
+ test_loss: 0.3927, accuracy: 0.8472, f1: 0.8350, coppa: 0.6929
+Starting epoch number 28
+Loss for Training on Epoch 28 is 0.26335054636001587
+Evaluating classifier
+Test result:
+ test_loss: 0.2530, accuracy: 0.8949, f1: 0.8915, coppa: 0.7896
+Test result:
+ test_loss: 0.4045, accuracy: 0.8387, f1: 0.8261, coppa: 0.6760
+Starting epoch number 29
+Loss for Training on Epoch 29 is 0.2564672827720642
+Evaluating classifier
+Test result:
+ test_loss: 0.2496, accuracy: 0.8952, f1: 0.8908, coppa: 0.7901
+Test result:
+ test_loss: 0.4019, accuracy: 0.8370, f1: 0.8204, coppa: 0.6719
+Starting epoch number 30
+Loss for Training on Epoch 30 is 0.2553079426288605
+Evaluating classifier
+Test result:
+ test_loss: 0.2488, accuracy: 0.8963, f1: 0.8922, coppa: 0.7924
+Test result:
+ test_loss: 0.4073, accuracy: 0.8337, f1: 0.8194, coppa: 0.6657
+Starting epoch number 31
+Loss for Training on Epoch 31 is 0.2544058859348297
+Evaluating classifier
+Test result:
+ test_loss: 0.2466, accuracy: 0.8966, f1: 0.8921, coppa: 0.7928
+Test result:
+ test_loss: 0.4111, accuracy: 0.8287, f1: 0.8118, coppa: 0.6552
+Starting epoch number 32
+Loss for Training on Epoch 32 is 0.2602570056915283
+Evaluating classifier
+Test result:
+ test_loss: 0.2451, accuracy: 0.8975, f1: 0.8934, coppa: 0.7946
+Test result:
+ test_loss: 0.4554, accuracy: 0.7969, f1: 0.7634, coppa: 0.5892
+Starting epoch number 33
+Loss for Training on Epoch 33 is 0.25651639699935913
+Evaluating classifier
+Test result:
+ test_loss: 0.2430, accuracy: 0.8986, f1: 0.8953, coppa: 0.7969
+Test result:
+ test_loss: 0.4143, accuracy: 0.8230, f1: 0.8056, coppa: 0.6439
+Starting epoch number 34
+Loss for Training on Epoch 34 is 0.25204065442085266
+Evaluating classifier
+Test result:
+ test_loss: 0.2414, accuracy: 0.8994, f1: 0.8950, coppa: 0.7985
+Test result:
+ test_loss: 0.4174, accuracy: 0.8208, f1: 0.7996, coppa: 0.6388
+Starting epoch number 35
+Loss for Training on Epoch 35 is 0.2488546073436737
+Evaluating classifier
+Test result:
+ test_loss: 0.2409, accuracy: 0.8988, f1: 0.8944, coppa: 0.7972
+Test result:
+ test_loss: 0.4115, accuracy: 0.8296, f1: 0.8120, coppa: 0.6570
+Starting epoch number 36
+Loss for Training on Epoch 36 is 0.25278154015541077
+Evaluating classifier
+Test result:
+ test_loss: 0.2433, accuracy: 0.8995, f1: 0.8947, coppa: 0.7985
+Test result:
+ test_loss: 0.4701, accuracy: 0.7918, f1: 0.7578, coppa: 0.5790
+Starting epoch number 37
+Loss for Training on Epoch 37 is 0.25546327233314514
+Evaluating classifier
+Test result:
+ test_loss: 0.2467, accuracy: 0.8977, f1: 0.8913, coppa: 0.7949
+Test result:
+ test_loss: 0.5402, accuracy: 0.7445, f1: 0.6739, coppa: 0.4796
+Starting epoch number 38
+Loss for Training on Epoch 38 is 0.25197282433509827
+Evaluating classifier
+Test result:
+ test_loss: 0.2400, accuracy: 0.8997, f1: 0.8964, coppa: 0.7993
+Test result:
+ test_loss: 0.4436, accuracy: 0.8154, f1: 0.7978, coppa: 0.6285
+Starting epoch number 39
+Loss for Training on Epoch 39 is 0.2441999316215515
+Evaluating classifier
+Test result:
+ test_loss: 0.2416, accuracy: 0.9002, f1: 0.8940, coppa: 0.8000
+Test result:
+ test_loss: 0.5069, accuracy: 0.7564, f1: 0.6949, coppa: 0.5046
+Starting epoch number 40
+Loss for Training on Epoch 40 is 0.24636614322662354
+Evaluating classifier
+Test result:
+ test_loss: 0.2344, accuracy: 0.9025, f1: 0.8977, coppa: 0.8046
+Test result:
+ test_loss: 0.5218, accuracy: 0.7711, f1: 0.7206, coppa: 0.5354
+Starting epoch number 41
+Loss for Training on Epoch 41 is 0.24635620415210724
+Evaluating classifier
+Test result:
+ test_loss: 0.2378, accuracy: 0.9007, f1: 0.8962, coppa: 0.8011
+Test result:
+ test_loss: 0.4382, accuracy: 0.8092, f1: 0.7842, coppa: 0.6151
+Starting epoch number 42
+Loss for Training on Epoch 42 is 0.24356696009635925
+Evaluating classifier
+Test result:
+ test_loss: 0.2364, accuracy: 0.9026, f1: 0.8986, coppa: 0.8049
+Test result:
+ test_loss: 0.5145, accuracy: 0.7616, f1: 0.7224, coppa: 0.5179
+Starting epoch number 43
+Loss for Training on Epoch 43 is 0.24623756110668182
+Evaluating classifier
+Test result:
+ test_loss: 0.2332, accuracy: 0.9037, f1: 0.9011, coppa: 0.8072
+Test result:
+ test_loss: 0.4775, accuracy: 0.7916, f1: 0.7648, coppa: 0.5796
+Starting epoch number 44
+Loss for Training on Epoch 44 is 0.24010373651981354
+Evaluating classifier
+Test result:
+ test_loss: 0.2361, accuracy: 0.9008, f1: 0.8979, coppa: 0.8014
+Test result:
+ test_loss: 0.4193, accuracy: 0.8407, f1: 0.8320, coppa: 0.6805
+Starting epoch number 45
+Loss for Training on Epoch 45 is 0.2419518083333969
+Evaluating classifier
+Test result:
+ test_loss: 0.2310, accuracy: 0.9043, f1: 0.8997, coppa: 0.8083
+Test result:
+ test_loss: 0.4683, accuracy: 0.7927, f1: 0.7651, coppa: 0.5817
+Starting epoch number 46
+Loss for Training on Epoch 46 is 0.23794890940189362
+Evaluating classifier
+Test result:
+ test_loss: 0.2277, accuracy: 0.9065, f1: 0.9016, coppa: 0.8126
+Test result:
+ test_loss: 0.4874, accuracy: 0.7830, f1: 0.7454, coppa: 0.5608
+Starting epoch number 47
+Loss for Training on Epoch 47 is 0.23578891158103943
+Evaluating classifier
+Test result:
+ test_loss: 0.2269, accuracy: 0.9057, f1: 0.9017, coppa: 0.8112
+Test result:
+ test_loss: 0.4828, accuracy: 0.7877, f1: 0.7502, coppa: 0.5703
+Starting epoch number 48
+Loss for Training on Epoch 48 is 0.2325291782617569
+Evaluating classifier
+Test result:
+ test_loss: 0.2271, accuracy: 0.9059, f1: 0.9039, coppa: 0.8117
+Test result:
+ test_loss: 0.4524, accuracy: 0.8078, f1: 0.7911, coppa: 0.6136
+Starting epoch number 49
+Loss for Training on Epoch 49 is 0.23838745057582855
+Evaluating classifier
+Test result:
+ test_loss: 0.2289, accuracy: 0.9060, f1: 0.9016, coppa: 0.8116
+Test result:
+ test_loss: 0.5076, accuracy: 0.7821, f1: 0.7483, coppa: 0.5596
+Starting epoch number 50
+Loss for Training on Epoch 50 is 0.2330571413040161
+Evaluating classifier
+Test result:
+ test_loss: 0.2252, accuracy: 0.9076, f1: 0.9020, coppa: 0.8148
+Test result:
+ test_loss: 0.4702, accuracy: 0.8101, f1: 0.7894, coppa: 0.6176
+Starting epoch number 51
+Loss for Training on Epoch 51 is 0.22846485674381256
+Evaluating classifier
+Test result:
+ test_loss: 0.2193, accuracy: 0.9099, f1: 0.9067, coppa: 0.8196
+Test result:
+ test_loss: 0.4497, accuracy: 0.8120, f1: 0.7906, coppa: 0.6211
+Starting epoch number 52
+Loss for Training on Epoch 52 is 0.22934304177761078
+Evaluating classifier
+Test result:
+ test_loss: 0.2197, accuracy: 0.9101, f1: 0.9067, coppa: 0.8200
+Test result:
+ test_loss: 0.4651, accuracy: 0.7997, f1: 0.7745, coppa: 0.5961
+Starting epoch number 53
+Loss for Training on Epoch 53 is 0.22228632867336273
+Evaluating classifier
+Test result:
+ test_loss: 0.2171, accuracy: 0.9102, f1: 0.9080, coppa: 0.8203
+Test result:
+ test_loss: 0.4208, accuracy: 0.8303, f1: 0.8182, coppa: 0.6592
+Starting epoch number 54
+Loss for Training on Epoch 54 is 0.2205638587474823
+Evaluating classifier
+Test result:
+ test_loss: 0.2124, accuracy: 0.9129, f1: 0.9098, coppa: 0.8257
+Test result:
+ test_loss: 0.4154, accuracy: 0.8350, f1: 0.8246, coppa: 0.6689
+Starting epoch number 55
+Loss for Training on Epoch 55 is 0.22312286496162415
+Evaluating classifier
+Test result:
+ test_loss: 0.2236, accuracy: 0.9074, f1: 0.9065, coppa: 0.8149
+Test result:
+ test_loss: 0.5168, accuracy: 0.7776, f1: 0.7654, coppa: 0.5539
+Starting epoch number 56
+Loss for Training on Epoch 56 is 0.22062769532203674
+Evaluating classifier
+Test result:
+ test_loss: 0.2132, accuracy: 0.9136, f1: 0.9089, coppa: 0.8269
+Test result:
+ test_loss: 0.5011, accuracy: 0.7924, f1: 0.7592, coppa: 0.5803
+Starting epoch number 57
+Loss for Training on Epoch 57 is 0.22028560936450958
+Evaluating classifier
+Test result:
+ test_loss: 0.2128, accuracy: 0.9136, f1: 0.9107, coppa: 0.8271
+Test result:
+ test_loss: 0.4542, accuracy: 0.8201, f1: 0.8085, coppa: 0.6389
+Starting epoch number 58
+Loss for Training on Epoch 58 is 0.2220773845911026
+Evaluating classifier
+Test result:
+ test_loss: 0.2098, accuracy: 0.9133, f1: 0.9106, coppa: 0.8263
+Test result:
+ test_loss: 0.4516, accuracy: 0.8079, f1: 0.7973, coppa: 0.6148
+Starting epoch number 59
+Loss for Training on Epoch 59 is 0.2179088294506073
+Evaluating classifier
+Test result:
+ test_loss: 0.2127, accuracy: 0.9120, f1: 0.9100, coppa: 0.8239
+Test result:
+ test_loss: 0.4327, accuracy: 0.8198, f1: 0.8136, coppa: 0.6393
+Starting epoch number 60
+Loss for Training on Epoch 60 is 0.2187042087316513
+Evaluating classifier
+Test result:
+ test_loss: 0.2094, accuracy: 0.9152, f1: 0.9110, coppa: 0.8301
+Test result:
+ test_loss: 0.4464, accuracy: 0.8157, f1: 0.7972, coppa: 0.6291
+2022-05-04 11:35:31 Index:4, Model: WMM, train_site: 9, test_site: 9, type: L8
+Starting epoch number 1
+Loss for Training on Epoch 1 is 0.4302988052368164
+Evaluating classifier
+Test result:
+ test_loss: 0.6403, accuracy: 0.8278, f1: 0.8390, coppa: 0.6579
+Test result:
+ test_loss: 0.6409, accuracy: 0.7598, f1: 0.7801, coppa: 0.5304
+Starting epoch number 2
+Loss for Training on Epoch 2 is 0.3405269980430603
+Evaluating classifier
+Test result:
+ test_loss: 0.4427, accuracy: 0.8493, f1: 0.8538, coppa: 0.6998
+Test result:
+ test_loss: 0.5045, accuracy: 0.8283, f1: 0.8260, coppa: 0.6583
+Starting epoch number 3
+Loss for Training on Epoch 3 is 0.3312208950519562
+Evaluating classifier
+Test result:
+ test_loss: 0.3241, accuracy: 0.8747, f1: 0.8706, coppa: 0.7492
+Test result:
+ test_loss: 0.4287, accuracy: 0.8162, f1: 0.7970, coppa: 0.6291
+Starting epoch number 4
+Loss for Training on Epoch 4 is 0.3094909191131592
+Evaluating classifier
+Test result:
+ test_loss: 0.3036, accuracy: 0.8844, f1: 0.8812, coppa: 0.7687
+Test result:
+ test_loss: 0.4428, accuracy: 0.8127, f1: 0.7763, coppa: 0.6176
+Starting epoch number 5
+Loss for Training on Epoch 5 is 0.30906999111175537
+Evaluating classifier
+Test result:
+ test_loss: 0.2911, accuracy: 0.8857, f1: 0.8805, coppa: 0.7710
+Test result:
+ test_loss: 0.5492, accuracy: 0.7475, f1: 0.6478, coppa: 0.4734
+Starting epoch number 6
+Loss for Training on Epoch 6 is 0.2975269854068756
+Evaluating classifier
+Test result:
+ test_loss: 0.2897, accuracy: 0.8872, f1: 0.8840, coppa: 0.7743
+Test result:
+ test_loss: 0.4939, accuracy: 0.7501, f1: 0.6617, coppa: 0.4809
+Starting epoch number 7
+Loss for Training on Epoch 7 is 0.29727059602737427
+Evaluating classifier
+Test result:
+ test_loss: 0.3398, accuracy: 0.8684, f1: 0.8526, coppa: 0.7350
+Test result:
+ test_loss: 0.6071, accuracy: 0.6317, f1: 0.3566, coppa: 0.2119
+Starting epoch number 8
+Loss for Training on Epoch 8 is 0.30098187923431396
+Evaluating classifier
+Test result:
+ test_loss: 0.2809, accuracy: 0.8895, f1: 0.8844, coppa: 0.7785
+Test result:
+ test_loss: 0.6892, accuracy: 0.6960, f1: 0.5346, coppa: 0.3589
+Starting epoch number 9
+Loss for Training on Epoch 9 is 0.2920330762863159
+Evaluating classifier
+Test result:
+ test_loss: 0.2749, accuracy: 0.8928, f1: 0.8882, coppa: 0.7853
+Test result:
+ test_loss: 0.5644, accuracy: 0.7343, f1: 0.6232, coppa: 0.4449
+Starting epoch number 10
+Loss for Training on Epoch 10 is 0.2816619873046875
+Evaluating classifier
+Test result:
+ test_loss: 0.2750, accuracy: 0.8903, f1: 0.8873, coppa: 0.7804
+Test result:
+ test_loss: 0.4878, accuracy: 0.7673, f1: 0.6920, coppa: 0.5180
+Starting epoch number 11
+Loss for Training on Epoch 11 is 0.28854963183403015
+Evaluating classifier
+Test result:
+ test_loss: 0.2894, accuracy: 0.8841, f1: 0.8844, coppa: 0.7686
+Test result:
+ test_loss: 0.5316, accuracy: 0.7536, f1: 0.6672, coppa: 0.4883
+Starting epoch number 12
+Loss for Training on Epoch 12 is 0.28321534395217896
+Evaluating classifier
+Test result:
+ test_loss: 0.2716, accuracy: 0.8925, f1: 0.8886, coppa: 0.7848
+Test result:
+ test_loss: 0.5221, accuracy: 0.7568, f1: 0.6702, coppa: 0.4948
+Starting epoch number 13
+Loss for Training on Epoch 13 is 0.2779031991958618
+Evaluating classifier
+Test result:
+ test_loss: 0.2824, accuracy: 0.8927, f1: 0.8846, coppa: 0.7845
+Test result:
+ test_loss: 0.7273, accuracy: 0.6740, f1: 0.4727, coppa: 0.3081
+Starting epoch number 14
+Loss for Training on Epoch 14 is 0.27851754426956177
+Evaluating classifier
+Test result:
+ test_loss: 0.3044, accuracy: 0.8779, f1: 0.8714, coppa: 0.7552
+Test result:
+ test_loss: 0.7387, accuracy: 0.6331, f1: 0.5468, coppa: 0.2472
+Starting epoch number 15
+Loss for Training on Epoch 15 is 0.2734821140766144
+Evaluating classifier
+Test result:
+ test_loss: 0.2619, accuracy: 0.8961, f1: 0.8910, coppa: 0.7918
+Test result:
+ test_loss: 0.5211, accuracy: 0.7262, f1: 0.6027, coppa: 0.4263
+Starting epoch number 16
+Loss for Training on Epoch 16 is 0.27772465348243713
+Evaluating classifier
+Test result:
+ test_loss: 0.2658, accuracy: 0.8959, f1: 0.8896, coppa: 0.7912
+Test result:
+ test_loss: 0.6957, accuracy: 0.6833, f1: 0.5006, coppa: 0.3298
+Starting epoch number 17
+Loss for Training on Epoch 17 is 0.2696387767791748
+Evaluating classifier
+Test result:
+ test_loss: 0.2663, accuracy: 0.8958, f1: 0.8931, coppa: 0.7915
+Test result:
+ test_loss: 0.5971, accuracy: 0.6933, f1: 0.5308, coppa: 0.3532
+Starting epoch number 18
+Loss for Training on Epoch 18 is 0.2673340141773224
+Evaluating classifier
+Test result:
+ test_loss: 0.2811, accuracy: 0.8905, f1: 0.8833, coppa: 0.7803
+Test result:
+ test_loss: 0.8781, accuracy: 0.6142, f1: 0.2971, coppa: 0.1710
+Starting epoch number 19
+Loss for Training on Epoch 19 is 0.2718047499656677
+Evaluating classifier
+Test result:
+ test_loss: 0.2580, accuracy: 0.8974, f1: 0.8911, coppa: 0.7942
+Test result:
+ test_loss: 0.7469, accuracy: 0.6317, f1: 0.3503, coppa: 0.2111
+Starting epoch number 20
+Loss for Training on Epoch 20 is 0.2650631368160248
+Evaluating classifier
+Test result:
+ test_loss: 0.2609, accuracy: 0.8988, f1: 0.8944, coppa: 0.7973
+Test result:
+ test_loss: 0.6703, accuracy: 0.6570, f1: 0.4243, coppa: 0.2691
+Starting epoch number 21
+Loss for Training on Epoch 21 is 0.26207101345062256
+Evaluating classifier
+Test result:
+ test_loss: 0.2658, accuracy: 0.8981, f1: 0.8945, coppa: 0.7959
+Test result:
+ test_loss: 0.6366, accuracy: 0.6476, f1: 0.4012, coppa: 0.2482
+Starting epoch number 22
+Loss for Training on Epoch 22 is 0.26832932233810425
+Evaluating classifier
+Test result:
+ test_loss: 0.2540, accuracy: 0.9000, f1: 0.8934, coppa: 0.7993
+Test result:
+ test_loss: 0.7567, accuracy: 0.6181, f1: 0.3093, coppa: 0.1798
+Starting epoch number 23
+Loss for Training on Epoch 23 is 0.2583002746105194
+Evaluating classifier
+Test result:
+ test_loss: 0.2508, accuracy: 0.9006, f1: 0.8973, coppa: 0.8010
+Test result:
+ test_loss: 0.7323, accuracy: 0.6372, f1: 0.3748, coppa: 0.2248
+Starting epoch number 24
+Loss for Training on Epoch 24 is 0.2599554657936096
+Evaluating classifier
+Test result:
+ test_loss: 0.2565, accuracy: 0.8986, f1: 0.8901, coppa: 0.7963
+Test result:
+ test_loss: 1.2599, accuracy: 0.5779, f1: 0.1559, coppa: 0.0847
+Starting epoch number 25
+Loss for Training on Epoch 25 is 0.2639350891113281
+Evaluating classifier
+Test result:
+ test_loss: 0.5094, accuracy: 0.8325, f1: 0.8003, coppa: 0.6613
+Test result:
+ test_loss: 3.6725, accuracy: 0.5481, f1: 0.0271, coppa: 0.0137
+Starting epoch number 26
+Loss for Training on Epoch 26 is 0.2677949070930481
+Evaluating classifier
+Test result:
+ test_loss: 0.2666, accuracy: 0.8954, f1: 0.8932, coppa: 0.7907
+Test result:
+ test_loss: 0.7156, accuracy: 0.6624, f1: 0.4457, coppa: 0.2824
+Starting epoch number 27
+Loss for Training on Epoch 27 is 0.2616046369075775
+Evaluating classifier
+Test result:
+ test_loss: 0.2562, accuracy: 0.8993, f1: 0.8947, coppa: 0.7982
+Test result:
+ test_loss: 0.6475, accuracy: 0.6656, f1: 0.4514, coppa: 0.2892
+Epoch 00027: reducing learning rate of group 0 to 2.5000e-04.
+Starting epoch number 28
+Loss for Training on Epoch 28 is 0.2679561376571655
+Evaluating classifier
+Test result:
+ test_loss: 0.2438, accuracy: 0.9034, f1: 0.8967, coppa: 0.8061
+Test result:
+ test_loss: 0.9325, accuracy: 0.5995, f1: 0.2426, coppa: 0.1362
+Starting epoch number 29
+Loss for Training on Epoch 29 is 0.2498319447040558
+Evaluating classifier
+Test result:
+ test_loss: 0.2438, accuracy: 0.9044, f1: 0.9006, coppa: 0.8085
+Test result:
+ test_loss: 0.7213, accuracy: 0.6295, f1: 0.3474, coppa: 0.2065
+Starting epoch number 30
+Loss for Training on Epoch 30 is 0.2512882649898529
+Evaluating classifier
+Test result:
+ test_loss: 0.2356, accuracy: 0.9068, f1: 0.9022, coppa: 0.8132
+Test result:
+ test_loss: 0.8591, accuracy: 0.6129, f1: 0.2906, coppa: 0.1676
+Starting epoch number 31
+Loss for Training on Epoch 31 is 0.24781854450702667
+Evaluating classifier
+Test result:
+ test_loss: 0.2342, accuracy: 0.9064, f1: 0.9024, coppa: 0.8125
+Test result:
+ test_loss: 0.8201, accuracy: 0.6167, f1: 0.3043, coppa: 0.1766
+Starting epoch number 32
+Loss for Training on Epoch 32 is 0.2473868727684021
+Evaluating classifier
+Test result:
+ test_loss: 0.2317, accuracy: 0.9074, f1: 0.9027, coppa: 0.8144
+Test result:
+ test_loss: 0.8529, accuracy: 0.6170, f1: 0.3055, coppa: 0.1774
+Starting epoch number 33
+Loss for Training on Epoch 33 is 0.2433052659034729
+Evaluating classifier
+Test result:
+ test_loss: 0.2344, accuracy: 0.9068, f1: 0.9012, coppa: 0.8130
+Test result:
+ test_loss: 0.9889, accuracy: 0.5989, f1: 0.2401, coppa: 0.1347
+Starting epoch number 34
+Loss for Training on Epoch 34 is 0.24228014051914215
+Evaluating classifier
+Test result:
+ test_loss: 0.2317, accuracy: 0.9077, f1: 0.9034, coppa: 0.8150
+Test result:
+ test_loss: 1.0772, accuracy: 0.6044, f1: 0.2614, coppa: 0.1478
+Starting epoch number 35
+Loss for Training on Epoch 35 is 0.2395990788936615
+Evaluating classifier
+Test result:
+ test_loss: 0.2324, accuracy: 0.9091, f1: 0.9046, coppa: 0.8178
+Test result:
+ test_loss: 0.8203, accuracy: 0.6187, f1: 0.3138, coppa: 0.1815
+Starting epoch number 36
+Loss for Training on Epoch 36 is 0.2404423952102661
+Evaluating classifier
+Test result:
+ test_loss: 0.2290, accuracy: 0.9091, f1: 0.9046, coppa: 0.8177
+Test result:
+ test_loss: 0.9720, accuracy: 0.5917, f1: 0.2177, coppa: 0.1181
+Starting epoch number 37
+Loss for Training on Epoch 37 is 0.2457839399576187
+Evaluating classifier
+Test result:
+ test_loss: 0.2315, accuracy: 0.9081, f1: 0.9045, coppa: 0.8160
+Test result:
+ test_loss: 0.7566, accuracy: 0.6542, f1: 0.4288, coppa: 0.2644
+Starting epoch number 38
+Loss for Training on Epoch 38 is 0.24224135279655457
+Evaluating classifier
+Test result:
+ test_loss: 0.2632, accuracy: 0.8958, f1: 0.8865, coppa: 0.7906
+Test result:
+ test_loss: 1.8427, accuracy: 0.5668, f1: 0.1101, coppa: 0.0584
+Starting epoch number 39
+Loss for Training on Epoch 39 is 0.24169382452964783
+Evaluating classifier
+Test result:
+ test_loss: 0.2261, accuracy: 0.9096, f1: 0.9048, coppa: 0.8188
+Test result:
+ test_loss: 0.9627, accuracy: 0.6194, f1: 0.3180, coppa: 0.1835
+Starting epoch number 40
+Loss for Training on Epoch 40 is 0.23714175820350647
+Evaluating classifier
+Test result:
+ test_loss: 0.2273, accuracy: 0.9104, f1: 0.9047, coppa: 0.8203
+Test result:
+ test_loss: 0.9639, accuracy: 0.5952, f1: 0.2299, coppa: 0.1263
+Starting epoch number 41
+Loss for Training on Epoch 41 is 0.23690657317638397
+Evaluating classifier
+Test result:
+ test_loss: 0.2274, accuracy: 0.9100, f1: 0.9066, coppa: 0.8198
+Test result:
+ test_loss: 0.9282, accuracy: 0.6158, f1: 0.3095, coppa: 0.1755
+Starting epoch number 42
+Loss for Training on Epoch 42 is 0.23650558292865753
+Evaluating classifier
+Test result:
+ test_loss: 0.2264, accuracy: 0.9101, f1: 0.9043, coppa: 0.8197
+Test result:
+ test_loss: 1.2801, accuracy: 0.5938, f1: 0.2190, coppa: 0.1224
+Starting epoch number 43
+Loss for Training on Epoch 43 is 0.23308749496936798
+Evaluating classifier
+Test result:
+ test_loss: 0.2255, accuracy: 0.9115, f1: 0.9072, coppa: 0.8226
+Test result:
+ test_loss: 0.8644, accuracy: 0.6315, f1: 0.3565, coppa: 0.2116
+Starting epoch number 44
+Loss for Training on Epoch 44 is 0.23632532358169556
+Evaluating classifier
+Test result:
+ test_loss: 0.2225, accuracy: 0.9115, f1: 0.9067, coppa: 0.8225
+Test result:
+ test_loss: 1.0166, accuracy: 0.6197, f1: 0.3161, coppa: 0.1838
+Starting epoch number 45
+Loss for Training on Epoch 45 is 0.23534683883190155
+Evaluating classifier
+Test result:
+ test_loss: 0.2226, accuracy: 0.9122, f1: 0.9066, coppa: 0.8239
+Test result:
+ test_loss: 1.0985, accuracy: 0.5977, f1: 0.2399, coppa: 0.1323
+Starting epoch number 46
+Loss for Training on Epoch 46 is 0.22905731201171875
+Evaluating classifier
+Test result:
+ test_loss: 0.2287, accuracy: 0.9094, f1: 0.9071, coppa: 0.8187
+Test result:
+ test_loss: 0.7252, accuracy: 0.6641, f1: 0.4595, coppa: 0.2876
+Starting epoch number 47
+Loss for Training on Epoch 47 is 0.23360061645507812
+Evaluating classifier
+Test result:
+ test_loss: 0.2387, accuracy: 0.9081, f1: 0.9006, coppa: 0.8155
+Test result:
+ test_loss: 1.6104, accuracy: 0.5739, f1: 0.1411, coppa: 0.0754
+Starting epoch number 48
+Loss for Training on Epoch 48 is 0.2332814633846283
+Evaluating classifier
+Test result:
+ test_loss: 0.2223, accuracy: 0.9117, f1: 0.9081, coppa: 0.8231
+Test result:
+ test_loss: 0.8053, accuracy: 0.6874, f1: 0.5181, coppa: 0.3402
+Starting epoch number 49
+Loss for Training on Epoch 49 is 0.23052918910980225
+Evaluating classifier
+Test result:
+ test_loss: 0.2179, accuracy: 0.9130, f1: 0.9081, coppa: 0.8255
+Test result:
+ test_loss: 0.9535, accuracy: 0.6285, f1: 0.3456, coppa: 0.2043
+Starting epoch number 50
+Loss for Training on Epoch 50 is 0.22552810609340668
+Evaluating classifier
+Test result:
+ test_loss: 0.2199, accuracy: 0.9137, f1: 0.9096, coppa: 0.8270
+Test result:
+ test_loss: 0.8024, accuracy: 0.6518, f1: 0.4266, coppa: 0.2596
+Starting epoch number 51
+Loss for Training on Epoch 51 is 0.22888973355293274
+Evaluating classifier
+Test result:
+ test_loss: 0.2154, accuracy: 0.9152, f1: 0.9105, coppa: 0.8299
+Test result:
+ test_loss: 0.8285, accuracy: 0.6573, f1: 0.4360, coppa: 0.2714
+Starting epoch number 52
+Loss for Training on Epoch 52 is 0.22724303603172302
+Evaluating classifier
+Test result:
+ test_loss: 0.2184, accuracy: 0.9127, f1: 0.9091, coppa: 0.8251
+Test result:
+ test_loss: 1.0058, accuracy: 0.6322, f1: 0.3589, coppa: 0.2132
+Starting epoch number 53
+Loss for Training on Epoch 53 is 0.22471868991851807
+Evaluating classifier
+Test result:
+ test_loss: 0.2214, accuracy: 0.9124, f1: 0.9056, coppa: 0.8241
+Test result:
+ test_loss: 0.9840, accuracy: 0.6150, f1: 0.2991, coppa: 0.1727
+Starting epoch number 54
+Loss for Training on Epoch 54 is 0.2249986231327057
+Evaluating classifier
+Test result:
+ test_loss: 0.2144, accuracy: 0.9146, f1: 0.9111, coppa: 0.8289
+Test result:
+ test_loss: 0.9007, accuracy: 0.6570, f1: 0.4363, coppa: 0.2708
+Starting epoch number 55
+Loss for Training on Epoch 55 is 0.22809568047523499
+Evaluating classifier
+Test result:
+ test_loss: 0.2153, accuracy: 0.9146, f1: 0.9107, coppa: 0.8289
+Test result:
+ test_loss: 0.8239, accuracy: 0.6564, f1: 0.4444, coppa: 0.2709
+Starting epoch number 56
+Loss for Training on Epoch 56 is 0.2238081991672516
+Evaluating classifier
+Test result:
+ test_loss: 0.2128, accuracy: 0.9153, f1: 0.9114, coppa: 0.8303
+Test result:
+ test_loss: 1.0355, accuracy: 0.6492, f1: 0.4125, coppa: 0.2527
+Starting epoch number 57
+Loss for Training on Epoch 57 is 0.22433018684387207
+Evaluating classifier
+Test result:
+ test_loss: 0.2116, accuracy: 0.9158, f1: 0.9114, coppa: 0.8312
+Test result:
+ test_loss: 0.7664, accuracy: 0.6797, f1: 0.4938, coppa: 0.3220
+Starting epoch number 58
+Loss for Training on Epoch 58 is 0.21897350251674652
+Evaluating classifier
+Test result:
+ test_loss: 0.2093, accuracy: 0.9169, f1: 0.9128, coppa: 0.8334
+Test result:
+ test_loss: 0.8578, accuracy: 0.6594, f1: 0.4437, coppa: 0.2764
+Starting epoch number 59
+Loss for Training on Epoch 59 is 0.22053781151771545
+Evaluating classifier
+Test result:
+ test_loss: 0.2124, accuracy: 0.9157, f1: 0.9109, coppa: 0.8309
+Test result:
+ test_loss: 1.1012, accuracy: 0.6208, f1: 0.3260, coppa: 0.1871
+Starting epoch number 60
+Loss for Training on Epoch 60 is 0.21967364847660065
+Evaluating classifier
+Test result:
+ test_loss: 0.2078, accuracy: 0.9176, f1: 0.9129, coppa: 0.8348
+Test result:
+ test_loss: 0.7441, accuracy: 0.6725, f1: 0.4772, coppa: 0.3060
