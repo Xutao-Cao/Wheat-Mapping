@@ -1,8 +1,10 @@
+"""ConvLSTM was implemented by https://github.com/ndrplz/ConvLSTM_pytorch"""
 import torch.nn as nn
 import torch
 import torch.nn.functional as F
 import numpy as np
 from torch.nn.init import xavier_normal_
+
 class ConvLSTMCell(nn.Module):
 
     def __init__(self, input_dim, hidden_dim, kernel_size, bias):
@@ -54,11 +56,11 @@ class ConvLSTMCell(nn.Module):
 
     def init_hidden(self, batch_size, image_size):
         height, width = image_size
-        return (xavier_normal_(torch.empty(batch_size, self.hidden_dim, height, width, device=self.conv.weight.device)),
+        return (torch.zeros(batch_size, self.hidden_dim, height, width, device=self.conv.weight.device),
                 torch.zeros(batch_size, self.hidden_dim, height, width, device=self.conv.weight.device))
 
 
-class WMM(nn.Module):
+class ConvLSTM(nn.Module):
 
     """
     Parameters:
@@ -84,9 +86,9 @@ class WMM(nn.Module):
         >> h = last_states[0][0]  # 0 for layer index, 0 for h index
     """
 
-    def __init__(self, input_dim, hidden_dim=16, kernel_size=(3,3), num_layers=2, num_classes=1,
+    def __init__(self, input_dim, hidden_dim, kernel_size, num_layers,
                  batch_first=True, bias=True, return_all_layers=False):
-        super(WMM, self).__init__()
+        super(ConvLSTM, self).__init__()
 
         self._check_kernel_size_consistency(kernel_size)
 
@@ -95,7 +97,7 @@ class WMM(nn.Module):
         hidden_dim = self._extend_for_multilayer(hidden_dim, num_layers)
         if not len(kernel_size) == len(hidden_dim) == num_layers:
             raise ValueError('Inconsistent list length.')
-        self.num_classes = num_classes
+
         self.input_dim = input_dim
         self.hidden_dim = hidden_dim
         self.kernel_size = kernel_size
@@ -103,14 +105,7 @@ class WMM(nn.Module):
         self.batch_first = batch_first
         self.bias = bias
         self.return_all_layers = return_all_layers
-        self.attention = nn.Linear(
-            in_features=hidden_dim[0],
-            out_features=1,
-        )
-        self.fc = nn.Linear(
-            in_features=hidden_dim[0],
-            out_features=num_classes,
-        )
+
         cell_list = []
         for i in range(0, self.num_layers):
             cur_input_dim = self.input_dim if i == 0 else self.hidden_dim[i - 1]
@@ -148,7 +143,7 @@ class WMM(nn.Module):
             hidden_state = self._init_hidden(batch_size=b,
                                              image_size=(h, w))
 
-        # layer_output_list = []
+        layer_output_list = []
         last_state_list = []
 
         seq_len = input_tensor.size(1)
@@ -165,21 +160,15 @@ class WMM(nn.Module):
 
             layer_output = torch.stack(output_inner, dim=1)
             cur_layer_input = layer_output
-            # layer_output_list.append(layer_output)
+
+            layer_output_list.append(layer_output)
             last_state_list.append([h, c])
 
         if not self.return_all_layers:
-            # layer_output_list = layer_output_list[-1:]
+            layer_output_list = layer_output_list[-1:]
             last_state_list = last_state_list[-1:]
-        layer_output = layer_output.permute(0, 3, 4, 1, 2)
-        # layer_output (after permutation): (b, h, w, t, hidden_dim)
-        attn_weights = F.softmax(F.relu(self.attention(layer_output)), dim=3)
-        # softmax on the time dim
-        # attn_weights (after permutation): (b, h, w, hidden_dim, t)
-        fc_in = torch.matmul(attn_weights.permute(0, 1, 2, 4, 3), layer_output)
-        fc_out = self.fc(fc_in) 
-        # return fc_out.squeeze(), attn_weights.squeeze()
-        return fc_out.squeeze()
+
+        return layer_output_list, last_state_list
 
     def _init_hidden(self, batch_size, image_size):
         init_states = []
@@ -194,14 +183,171 @@ class WMM(nn.Module):
             raise ValueError('`kernel_size` must be tuple or list of tuples')
 
     @staticmethod
-    def _extend_for_multilayer(param, num_layers): 
+    def _extend_for_multilayer(param, num_layers):
         if not isinstance(param, list):
             param = [param] * num_layers
         return param
 
+class BiConvLSTM(nn.Module):
+    """output dim will be hidden_dim*2"""
+    def __init__(self, input_dim, hidden_dim, kernel_size, num_layers) -> None:
+        super().__init__()
+        self.forward_convlstm = ConvLSTM(input_dim, hidden_dim, kernel_size, num_layers)
+        self.backward_convlstm = ConvLSTM(input_dim, hidden_dim, kernel_size, num_layers)
+    
+    def forward(self, x):
+        out0 = self.forward_convlstm(x)[0][0]
+        reversed_index = list(reversed(range(x.shape[1])))
+        out1 = self.backward_convlstm(x[:,reversed_index,...])[0][0]
+        out = torch.cat([out0, out1], 2)
+        return out
 
-# x = torch.rand((32, 10, 3, 128, 128))
-# convlstm = WMM(3, 16, (3,3), 1, 1, True, True, False)
-# RST, _ = convlstm(x)
 
-# print(RST.size())
+class ResDoubleConv(nn.Module):
+
+    def __init__(self, in_channels, out_channels, timesteps) -> None:
+        super().__init__()
+        if timesteps == 0:
+            self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size = 3,  padding = 1, bias = False)
+            self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size = 3,  padding = 1, bias = False)
+        else:
+            self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size = 3, groups= timesteps , padding = 1, bias = False)
+            self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size = 3, groups= timesteps , padding = 1, bias = False)
+        if in_channels != out_channels:
+            if timesteps == 0:
+                self.res_connection = nn.Sequential(nn.Conv2d(in_channels,out_channels, kernel_size = 1, padding = 0, bias = False), 
+                                                nn.BatchNorm2d(out_channels))
+            else:
+                self.res_connection = nn.Sequential(nn.Conv2d(in_channels,out_channels, kernel_size = 1, groups= timesteps , padding = 0, bias = False), 
+                                                nn.BatchNorm2d(out_channels))
+            
+        else:
+            self.res_connection = nn.Sequential()
+        self.bn1 = nn.BatchNorm2d(out_channels)
+        self.bn2 = nn.BatchNorm2d(out_channels)
+        self.relu = nn.ReLU(inplace=True)
+
+    def forward(self, x):
+        identity = self.res_connection(x)
+        x = self.relu(self.bn1(self.conv1(x)))
+        x = self.bn2(self.conv2(x))
+        out = self.relu(x + identity)
+        out = self.relu(x)
+        return out
+
+class DownSampleBlock(nn.Module):
+    
+    def __init__(self, in_channels, out_channels, timesteps) -> None:
+        super().__init__()
+        self.down_sample = nn.Sequential(
+            nn.MaxPool2d(2),
+            ResDoubleConv(in_channels, out_channels, timesteps)
+        )
+
+    def forward(self, x):
+        return self.down_sample(x)
+
+class UpSampleBlock(nn.Module):
+    """Transposedconv -> concatenate -> double conv"""
+
+    def __init__(self, in_channels, out_channels, timesteps):
+        super().__init__()
+        self.up = nn.ConvTranspose2d(in_channels, in_channels//2, kernel_size=2, stride=2, groups=timesteps)
+        self.double_conv = ResDoubleConv(3*in_channels//2, out_channels, timesteps)
+
+    def forward(self, x, down_sample_x):
+        x = self.up(x)
+        x = torch.cat([down_sample_x, x], dim=1)
+        x = self.double_conv(x)
+        return x
+
+class _DenseLayer(nn.Module):
+    def __init__(self,in_channels, out_channels, dropout) -> None:
+        super().__init__()
+        self.forward_op = nn.Sequential(
+            nn.Conv2d(in_channels, out_channels, 1),
+            nn.BatchNorm2d(out_channels),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(out_channels, out_channels, 3, padding=1),
+            nn.BatchNorm2d(out_channels),
+            nn.ReLU(inplace=True),
+            nn.Dropout(dropout),
+        )
+    
+    def forward(self, x,):
+        return self.forward_op(x)
+        
+        
+            
+class DenseBlock(nn.Module):
+    def __init__(self, in_channels, out_channels, block_len, dropout = 0.5) -> None:
+        super().__init__()
+
+
+class WMM(nn.Module):
+
+    def __init__(self, n_channels, n_classes, timesteps,dropout = 0.2, n_feature_maps=120, n_convlstm = 1) -> None:
+        super().__init__()
+        self.channels = n_channels
+        self.classes = n_classes
+        self.timesteps = timesteps
+        self.n_convlstm = n_convlstm
+        self.doubleconv_0 = ResDoubleConv(n_channels, n_feature_maps, timesteps)
+        self.down_0 = DownSampleBlock(n_feature_maps, 2 * n_feature_maps, timesteps)
+        self.down_1 = DownSampleBlock(2 * n_feature_maps, 4 * n_feature_maps, timesteps)
+        self.down_2 = DownSampleBlock(4 * n_feature_maps, 8 * n_feature_maps, timesteps)
+        self.down_3 = DownSampleBlock(8 * n_feature_maps, 16 * n_feature_maps, timesteps)
+        self.dense0 = _DenseLayer(16 * n_feature_maps, 16 * n_feature_maps, dropout)
+        self.dense1 = _DenseLayer(32 * n_feature_maps, 16 * n_feature_maps, dropout)
+        self.dense2 = _DenseLayer(48 * n_feature_maps, 16 * n_feature_maps, dropout)
+        # self.dense3 = _DenseLayer(64* n_feature_maps, 16 * n_feature_maps, dropout)
+        self.up_0 = UpSampleBlock(16 * n_feature_maps, 8 * n_feature_maps, timesteps)
+        self.up_1 = UpSampleBlock(8 * n_feature_maps, 4 * n_feature_maps, timesteps)
+        self.up_2 = UpSampleBlock(4 * n_feature_maps, 2 * n_feature_maps, timesteps)
+        self.up_3 = UpSampleBlock(2 * n_feature_maps, n_feature_maps, timesteps)
+        self.out = nn.Conv2d(n_feature_maps, n_classes, kernel_size=1,)
+        self.convlstm0 = ConvLSTM(n_feature_maps // timesteps, n_feature_maps // timesteps, (3,3), n_convlstm, batch_first=True, bias = False)
+        self.convlstm1 = ConvLSTM(2 * n_feature_maps // timesteps, 2 * n_feature_maps // timesteps, (3,3), n_convlstm, batch_first=True, bias = False)
+        self.convlstm2 = ConvLSTM(4 * n_feature_maps // timesteps, 4 * n_feature_maps // timesteps, (3,3), n_convlstm, batch_first=True, bias = False)
+        self.convlstm3 = ConvLSTM(8 * n_feature_maps // timesteps, 8 * n_feature_maps // timesteps, (3,3), n_convlstm, batch_first=True, bias = False)
+        self.biconvlstm0 = BiConvLSTM(n_feature_maps // timesteps, n_feature_maps // timesteps, (3,3), n_convlstm)
+        self.biconvlstm1 = BiConvLSTM(2 * n_feature_maps // timesteps, 2* n_feature_maps // timesteps, (3,3), n_convlstm)
+        self.biconvlstm2 = BiConvLSTM(4 * n_feature_maps // timesteps, 4 * n_feature_maps // timesteps, (3,3), n_convlstm)
+        self.biconvlstm3 = BiConvLSTM(8 * n_feature_maps // timesteps, 8 * n_feature_maps // timesteps, (3,3), n_convlstm)
+    
+    def forward(self, x):
+        x = self._timeseq2img(x)
+        x0 = self.doubleconv_0(x)
+        x0_connect = self.biconvlstm0(self._img2timeseq(x0))
+        x1 = self.down_0(x0)
+        x1_connect = self.biconvlstm1(self._img2timeseq(x1))
+        x2 = self.down_1(x1)
+        x2_connect = self.biconvlstm2(self._img2timeseq(x2))
+        x3 = self.down_2(x2)
+        x3_connect= self.biconvlstm3(self._img2timeseq(x3))
+        x = self.down_3(x3)
+        dense0 = self.dense0(x)
+        dense1 = self.dense1(torch.cat([x, dense0], 1))
+        x = self.dense2(torch.cat([x, dense0, dense1], 1))
+        # x = self.dense3(torch.cat([x, dense0, dense1, dense2], 1))   
+        x = self.up_0(x, self._timeseq2img(x3_connect))
+        x = self.up_1(x, self._timeseq2img(x2_connect))
+        x = self.up_2(x, self._timeseq2img(x1_connect))
+        x = self.up_3(x, self._timeseq2img(x0_connect))
+        x = self.out(x)
+        return x.squeeze()
+
+    def _timeseq2img(self, x:torch.tensor):
+        """
+        input: (n, t, c, h, w)
+        output: (n, t*c, h, w)
+        """
+        return x.view((x.size(0), -1, x.size(3), x.size(4)))
+
+    def _img2timeseq(self, x:torch.tensor):
+        """
+        input: (n, t*c, h, w)
+        output: (n, t, c, h, w)
+        """
+        return x.view(x.size(0), self.timesteps, -1, x.size(2), x.size(3))
+
