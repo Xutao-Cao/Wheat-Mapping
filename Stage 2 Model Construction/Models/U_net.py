@@ -85,4 +85,15 @@ class U_net(nn.Module):
         x = self.up_3(x, x0)
         x = self.out(x)
         return x.squeeze()
-
+    
+    def get_feature(self, x):
+        x0 = self.doubleconv_0(x)
+        x1 = self.down_0(x0)
+        x2 = self.down_1(x1)
+        x3 = self.down_2(x2)
+        x = self.down_3(x3)
+        x = self.up_0(x, x3)
+        x = self.up_1(x, x2)
+        x = self.up_2(x, x1)
+        x = self.up_3(x, x0)
+        return x
