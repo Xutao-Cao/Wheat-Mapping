@@ -350,4 +350,25 @@ class WMM(nn.Module):
         output: (n, t, c, h, w)
         """
         return x.view(x.size(0), self.timesteps, -1, x.size(2), x.size(3))
+    
+    def extract_hidden(self, x):
+        x = self._timeseq2img(x)
+        x0 = self.doubleconv_0(x)
+        x0_connect = self.biconvlstm0(self._img2timeseq(x0))
+        x1 = self.down_0(x0)
+        x1_connect = self.biconvlstm1(self._img2timeseq(x1))
+        x2 = self.down_1(x1)
+        x2_connect = self.biconvlstm2(self._img2timeseq(x2))
+        x3 = self.down_2(x2)
+        x3_connect= self.biconvlstm3(self._img2timeseq(x3))
+        x = self.down_3(x3)
+        dense0 = self.dense0(x)
+        dense1 = self.dense1(torch.cat([x, dense0], 1))
+        x = self.dense2(torch.cat([x, dense0, dense1], 1))
+        # x = self.dense3(torch.cat([x, dense0, dense1, dense2], 1))   
+        x = self.up_0(x, self._timeseq2img(x3_connect))
+        x = self.up_1(x, self._timeseq2img(x2_connect))
+        x = self.up_2(x, self._timeseq2img(x1_connect))
+        x = self.up_3(x, self._timeseq2img(x0_connect))
+        return x
 
